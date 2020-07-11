@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Levenim';
+  src: local("Levenim MT"), url("../public/lvnm.woff") format("woff"); }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Cabin", sans-serif; }
+
+.logo {
+  margin: 2rem;
+  display: inline-block;
+  font-size: 10rem;
+  font-family: "Levenim", sans-serif; }
