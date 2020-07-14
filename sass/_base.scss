@@ -4,8 +4,12 @@
 }
 
 // Variables
-$font-primary: 'Cabin', sans-serif;
+$font-primary: 'Roboto Slab', serif;
 $font-logo: 'Levenim', sans-serif;
+
+$font-size-large: 7rem;
+
+$color-text: #f0f0f0;
 
 // Reset
 *,
@@ -25,9 +29,36 @@ body {
   font-family: $font-primary;
 }
 
-.logo {
+.container {
+  display: grid;
+  grid-template-rows: 80vh 1fr;
+  grid-template-columns: repeat(5, 1fr);
+
+  background: linear-gradient(to bottom, #4e6c9e, #edac8e);
+  height: 2000px;
+}
+
+/*
+.container {
+  height: 2000px;
+  position: relative;
+}
+
+.before {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
   margin: 2rem;
+  color: rgb(1, 1, 105);
   display: inline-block;
   font-size: 10rem;
   font-family: $font-logo;
+  transition: all 0.6s cubic-bezier(1, 0.23, 0.5, 0.99);
+
+  transform: scale(1);
 }
+
+.after {
+  // transform: translate(500px, 500px);
+}
+*/
