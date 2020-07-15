@@ -9,16 +9,4 @@
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-
-  #is {
-    grid-column: 2 / span 1;
-    color: $color-text;
-    font-size: $font-size-large;
-    justify-self: center;
-  }
-
-  // &__is {
-  //   position: fixed;
-  //   left: 48%;
-  // }
 }

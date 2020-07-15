@@ -1,3 +1,4 @@
+/*
 const is = document.getElementById('is');
 
 window.addEventListener('scroll', () => {
@@ -8,6 +9,7 @@ window.addEventListener('scroll', () => {
   }
   // 560
 });
+*/
 
 /*
 const logo = document.getElementById('logo');
