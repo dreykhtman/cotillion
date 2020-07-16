@@ -5,8 +5,8 @@
 }
 
 .main {
-  grid-column: 2 / -2;
+  grid-column: content-start / content-end;
 
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  // display: grid;
+  // grid-template-columns: repeat(3, 1fr);
 }

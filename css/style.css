@@ -19,7 +19,7 @@ body {
 .container {
   display: grid;
   grid-template-rows: 80vh 1fr;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: [full-start] 15vw [content-start] repeat(3, [col-start] 1fr [col-end]) [content-end] 15vw [full-end];
   background: linear-gradient(to bottom, #4e6c9e, #edac8e);
   height: 2000px; }
 
@@ -55,15 +55,27 @@ body {
   color: #f0f0f0;
   margin-top: 2rem; }
 
-.heading-2 {
-  grid-column: 2 / span 1;
-  color: #f0f0f0;
-  font-size: 7rem;
-  justify-self: center;
-  top: 100px;
-  margin-top: 100px;
-  width: 100px;
-  height: 20px; }
+.description {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(min-content, 1fr)); }
+  .description .heading-2 {
+    grid-row: 1 / span 1;
+    grid-column: 1 / -1;
+    color: #f0f0f0;
+    font-size: 7rem;
+    justify-self: center; }
+  .description__list {
+    list-style: none;
+    color: #f0f0f0;
+    font-size: 4rem; }
+    .description__list > li {
+      padding: 1.5rem 0; }
+    .description__list > :first-child {
+      text-align: center;
+      padding-bottom: 3rem; }
+    .description__list--dima {
+      grid-column: -2 /-1; }
 
 .header {
   grid-column: 1 / -1;
@@ -71,6 +83,4 @@ body {
   justify-self: center; }
 
 .main {
-  grid-column: 2 / -2;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); }
+  grid-column: content-start / content-end; }

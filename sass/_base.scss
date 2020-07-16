@@ -8,6 +8,7 @@ $font-primary: 'Roboto Slab', serif;
 $font-logo: 'Levenim', sans-serif;
 
 $font-size-large: 7rem;
+$font-size-medium: 4rem;
 
 $color-text: #f0f0f0;
 
@@ -32,7 +33,10 @@ body {
 .container {
   display: grid;
   grid-template-rows: 80vh 1fr;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: [full-start] 15vw [content-start] repeat(
+      3,
+      [col-start] 1fr [col-end]
+    ) [content-end] 15vw [full-end];
 
   background: linear-gradient(to bottom, #4e6c9e, #edac8e);
   height: 2000px;
