@@ -21,7 +21,7 @@ body {
   grid-template-rows: 80vh 1fr;
   grid-template-columns: [full-start] 15vw [content-start] repeat(3, [col-start] 1fr [col-end]) [content-end] 15vw [full-end];
   background: linear-gradient(to bottom, #4e6c9e, #edac8e);
-  height: 2000px; }
+  height: 5000px; }
 
 /*
 .container {
@@ -55,25 +55,44 @@ body {
   color: #f0f0f0;
   margin-top: 2rem; }
 
+.heading-2 {
+  color: #f0f0f0;
+  font-size: 7rem;
+  justify-self: center; }
+
 .description {
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: repeat(3, minmax(min-content, 1fr)); }
+  grid-template-rows: 80vh max-content;
+  grid-template-columns: repeat(3, minmax(max-content, 1fr)); }
+  .description #is {
+    position: sticky;
+    top: 8vh; }
   .description .heading-2 {
     grid-row: 1 / span 1;
-    grid-column: 1 / -1;
-    color: #f0f0f0;
-    font-size: 7rem;
-    justify-self: center; }
+    grid-column: 1 / -1; }
   .description__list {
     list-style: none;
     color: #f0f0f0;
     font-size: 4rem; }
+    .description__list > :nth-child(2) {
+      top: 45vh; }
+    .description__list > :nth-child(3) {
+      top: 55vh; }
+    .description__list > :nth-child(4) {
+      top: 65vh; }
+    .description__list > :nth-child(5) {
+      top: 75vh; }
     .description__list > li {
-      padding: 1.5rem 0; }
+      padding: 1.5rem 2rem;
+      position: sticky;
+      margin-bottom: 20rem;
+      margin-top: 1rem; }
     .description__list > :first-child {
       text-align: center;
-      padding-bottom: 3rem; }
+      padding-bottom: 3rem;
+      position: sticky;
+      top: 27vh;
+      padding-bottom: 10rem; }
     .description__list--dima {
       grid-column: -2 /-1; }
 

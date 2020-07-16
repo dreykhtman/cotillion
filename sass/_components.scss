@@ -7,18 +7,25 @@
   margin-top: 2rem;
 }
 
+.heading-2 {
+  color: $color-text;
+  font-size: $font-size-large;
+  justify-self: center;
+}
+
 .description {
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: repeat(3, minmax(min-content, 1fr));
+  grid-template-rows: 80vh max-content;
+  grid-template-columns: repeat(3, minmax(max-content, 1fr));
+
+  #is {
+    position: sticky;
+    top: 8vh;
+  }
 
   .heading-2 {
     grid-row: 1 / span 1;
     grid-column: 1 / -1;
-
-    color: $color-text;
-    font-size: $font-size-large;
-    justify-self: center;
   }
 
   &__list {
@@ -26,13 +33,26 @@
     color: $color-text;
     font-size: $font-size-medium;
 
+    @for $i from 1 through 4 {
+      & > :nth-child(#{$i + 1}) {
+        top: $i * 10vh + 35vh;
+        // bottom: $i * 10vh;
+      }
+    }
+
     & > li {
-      padding: 1.5rem 0;
+      padding: 1.5rem 2rem;
+      position: sticky;
+      margin-bottom: 20rem;
+      margin-top: 1rem;
     }
 
     & > :first-child {
       text-align: center;
       padding-bottom: 3rem;
+      position: sticky;
+      top: 27vh;
+      padding-bottom: 10rem;
     }
 
     &--dima {

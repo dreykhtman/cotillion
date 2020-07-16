@@ -33,13 +33,12 @@ body {
 .container {
   display: grid;
   grid-template-rows: 80vh 1fr;
-  grid-template-columns: [full-start] 15vw [content-start] repeat(
-      3,
-      [col-start] 1fr [col-end]
-    ) [content-end] 15vw [full-end];
+  grid-template-columns:
+    [full-start] 15vw [content-start] repeat(3, [col-start] 1fr [col-end])
+    [content-end] 15vw [full-end];
 
   background: linear-gradient(to bottom, #4e6c9e, #edac8e);
-  height: 2000px;
+  height: 5000px;
 }
 
 /*
