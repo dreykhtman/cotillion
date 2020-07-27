@@ -1,31 +1,29 @@
-const fiftyPercent = document.getElementsByClassName('heading-2');
+const targetList = document.getElementById('target-list');
+const fiftyLeft = document.getElementById('fifty-left');
+const fiftyRight = document.getElementById('fifty-right');
+const hundred = document.getElementById('hundred');
 
 // Intersection Observer
 const options = {
   root: null,
-  rootMargin: '5%',
-  threshold: 0.1,
+  rootMargin: '-100% 0px 0px 0px',
+  threshold: 0,
 };
 
 // const description = document.querySelector('.description');
 // console.log(description);
 
 const callback = (entries, observer) => {
-  const visibility = entries[0].intersectionRatio;
-  // if (visibility >= 0.1) {
-  //   fiftyPercent[1].style.transform = 'translateX(20vw)';
-  //   fiftyPercent[2].style.transform = 'translateX(-20vw)';
-
-  //   fiftyPercent[1].innerHTML = '100%';
-  //   fiftyPercent[2].innerHTML = '';
-  // } else {
-  //   fiftyPercent[1].style.transform = 'translateX(0)';
-  //   fiftyPercent[2].style.transform = 'translateX(0)';
-  //   fiftyPercent[1].innerHTML = '50%';
-  //   fiftyPercent[2].innerHTML = '50%';
-  // }
+  entries.forEach((entry) => {
+    if (entry.boundingClientRect.y < 0) {
+      // fiftyLeft.classList.toggle('slide-default');
+      // fiftyRight.classList.toggle('slide-default');
+      fiftyLeft.classList.toggle('slide-right');
+      fiftyRight.classList.toggle('slide-left');
+      hundred.classList.toggle('slide-down');
+    }
+  });
 };
 
 const observer = new IntersectionObserver(callback, options);
-const target = document.getElementById('target');
-observer.observe(target);
+observer.observe(targetList);
