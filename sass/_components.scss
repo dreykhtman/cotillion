@@ -15,7 +15,7 @@
 
 .description {
   display: grid;
-  grid-template-rows: 70vh min-content 150vh;
+  grid-template-rows: 70vh min-content 70vh;
   grid-template-columns: repeat(3, minmax(max-content, 1fr));
 
   &__is-100 {
@@ -36,6 +36,7 @@
   }
 
   &__list {
+    grid-row: 2 / span 1;
     list-style: none;
     color: $color-text;
     font-size: $font-size-medium;
@@ -65,11 +66,21 @@
       grid-column: -2 /-1;
     }
   }
+}
+
+.albums {
+  height: 300vh;
 
   &__logo {
+    position: sticky;
+    top: 0;
+
+    margin-top: -40vh;
+    // margin-top: 25vh;
     grid-row: -2 / -1;
     grid-column: 1 / -1;
     justify-self: center;
+    // height: 300vh;
   }
 }
 

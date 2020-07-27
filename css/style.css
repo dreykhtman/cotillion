@@ -61,7 +61,7 @@ body {
 
 .description {
   display: grid;
-  grid-template-rows: 70vh min-content 150vh;
+  grid-template-rows: 70vh min-content 70vh;
   grid-template-columns: repeat(3, minmax(max-content, 1fr)); }
   .description__is-100 {
     display: inline-block;
@@ -75,6 +75,7 @@ body {
     .description__is-100 #hundred {
       transition: all 0.8s cubic-bezier(0, 0.9, 0.07, 0.85) 0.4s; }
   .description__list {
+    grid-row: 2 / span 1;
     list-style: none;
     color: #f0f0f0;
     font-size: 4rem; }
@@ -103,7 +104,13 @@ body {
       text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black; }
     .description__list--dima {
       grid-column: -2 /-1; }
-  .description__logo {
+
+.albums {
+  height: 300vh; }
+  .albums__logo {
+    position: sticky;
+    top: 0;
+    margin-top: -40vh;
     grid-row: -2 / -1;
     grid-column: 1 / -1;
     justify-self: center; }
