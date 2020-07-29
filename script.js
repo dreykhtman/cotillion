@@ -2,6 +2,8 @@ const targetList = document.getElementById('target-list');
 const fiftyLeft = document.getElementById('fifty-left');
 const fiftyRight = document.getElementById('fifty-right');
 const hundred = document.getElementById('hundred');
+const albumCotillion = document.getElementById('album-cotillion');
+const jumpingLogo = document.getElementById('jumping-logo');
 
 // Intersection Observer
 const options = {
@@ -27,3 +29,26 @@ const callback = (entries, observer) => {
 
 const observer = new IntersectionObserver(callback, options);
 observer.observe(targetList);
+
+// Another intersection observer
+const artOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 1,
+};
+
+const artCallback = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.intersectionRatio === 1) {
+      console.log('hello!!11!!');
+
+      jumpingLogo.classList.add(
+        'cotillion-album-logo',
+        'cotillion-album-logo--c'
+      );
+    }
+  });
+};
+
+const artObserver = new IntersectionObserver(artCallback, artOptions);
+artObserver.observe(albumCotillion);
