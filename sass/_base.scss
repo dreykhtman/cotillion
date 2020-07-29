@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Levenim';
-  src: local('Levenim MT'), url('../public/lvnm.woff') format('woff');
+  src: local('Levenim MT'), url('../public/font/lvnm.woff') format('woff');
 }
 
 // Variables
@@ -32,7 +32,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 80vh 1fr;
+  grid-template-rows: 80vh 1fr min-content;
   grid-template-columns:
     [full-start] 13vw [content-start] repeat(3, [col-start] 1fr [col-end])
     [content-end] 13vw [full-end];

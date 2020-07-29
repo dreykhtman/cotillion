@@ -69,18 +69,38 @@
 }
 
 .albums {
-  height: 300vh;
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-rows: 70vh 150vh repeat(4, 1fr);
+  grid-template-columns: 2fr 5fr 2fr;
 
   &__logo {
+    grid-row: 1 / span 1;
+    grid-column: 1 / -1;
+    // align-self: start;
+
     position: sticky;
     top: 0;
-
     margin-top: -40vh;
     // margin-top: 25vh;
-    grid-row: -2 / -1;
-    grid-column: 1 / -1;
+    // grid-row: -2 / -1;
     justify-self: center;
     // height: 300vh;
+  }
+
+  &__heading {
+    grid-row: 2 / span 1;
+    grid-column: 1 / -1;
+  }
+
+  .album {
+    grid-column: 2 / span 1;
+
+    & > .cover > img {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
