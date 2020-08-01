@@ -107,39 +107,36 @@ body {
 
 .albums {
   grid-column: full-start / full-end;
+  row-gap: 15vh;
   display: grid;
-  grid-template-rows: 70vh 150vh repeat(4, 1fr);
-  grid-template-columns: 2fr 5fr 2fr;
+  grid-template-rows: 70vh 70vh repeat(4, 1fr);
+  grid-template-columns: 3fr 4fr 3fr;
   position: relative; }
   .albums__logo {
+    background: transparent;
     grid-row: 1 / span 1;
     grid-column: 1 / -1;
     position: sticky;
     top: 0;
     margin-top: -40vh;
     justify-self: center; }
-  .albums__logo::before {
-    content: 'Cotillion';
-    opacity: 0;
-    position: absolute; }
   .albums #jumping-logo {
     transition: all 0.2s; }
   .albums__heading {
     grid-row: 2 / span 1;
     grid-column: 1 / -1; }
-  .albums #album-cotillion {
-    grid-row: 3 / span 1; }
-  .albums #album-korean-fan-death {
-    grid-row: 4 / span 1; }
-  .albums #album-two-years {
-    grid-row: 5 / span 1; }
   .albums #album-the-debutantes {
+    grid-row: 3 / span 1; }
+  .albums #album-two-years {
+    grid-row: 4 / span 1; }
+  .albums #album-korean-fan-death {
+    grid-row: 5 / span 1; }
+  .albums #album-cotillion {
     grid-row: 6 / span 1; }
   .albums .album {
     grid-column: 2 / span 1; }
     .albums .album__cover > img {
-      width: 100%;
-      height: 100%; }
+      width: 100%; }
 
 .slide-right {
   transform: translateX(25vw);
