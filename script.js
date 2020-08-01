@@ -4,7 +4,7 @@ const fiftyRight = document.getElementById('fifty-right');
 const hundred = document.getElementById('hundred');
 const albumCotillion = document.getElementById('album-cotillion');
 const jumpingLogo = document.getElementById('jumping-logo');
-const albumCovers = document.querySelectorAll('.album__cover');
+const albums = document.querySelectorAll('.album');
 
 // Intersection Observer
 const options = {
@@ -54,7 +54,7 @@ const artCallback = (entries, observer) => {
 };
 
 const artObserver = new IntersectionObserver(artCallback, artOptions);
-albumCovers.forEach((cover) => artObserver.observe(cover));
+albums.forEach((cover) => artObserver.observe(cover));
 // for (const cover of albumCovers) {
 //   artObserver.observe(cover)
 // }

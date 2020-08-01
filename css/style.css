@@ -135,7 +135,7 @@ body {
     grid-row: 6 / span 1; }
   .albums .album {
     grid-column: 2 / span 1; }
-    .albums .album__cover > img {
+    .albums .album > img {
       width: 100%; }
 
 .slide-right {
