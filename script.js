@@ -45,10 +45,7 @@ const artCallback = (entries, observer) => {
       entry.boundingClientRect.y > 0
     ) {
       console.log('Hello!');
-      jumpingLogo.classList.add(
-        'cotillion-album-logo',
-        'cotillion-album-logo--c'
-      );
+      jumpingLogo.classList.add('debutantes-logo');
     }
   });
 };

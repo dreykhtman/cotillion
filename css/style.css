@@ -126,7 +126,15 @@ body {
     grid-row: 2 / span 1;
     grid-column: 1 / -1; }
   .albums #album-the-debutantes {
+    position: relative;
     grid-row: 3 / span 1; }
+    .albums #album-the-debutantes .debutantes-logo {
+      position: absolute;
+      bottom: 20.1%;
+      left: 2.5%;
+      font-size: 5vw;
+      font-family: "Levenim", sans-serif;
+      color: white; }
   .albums #album-two-years {
     grid-row: 4 / span 1; }
   .albums #album-korean-fan-death {
@@ -155,9 +163,14 @@ body {
   opacity: 1; }
 
 .cotillion-album-logo {
-  font-family: "Levenim", sans-serif;
-  color: #f0f0f0;
-  display: inline-block; }
+  top: -100vh; }
+  .cotillion-album-logo--td {
+    position: absolute;
+    height: 0;
+    margin-left: -20vw;
+    top: 250vh;
+    font-size: 6vw;
+    color: black; }
   .cotillion-album-logo--c {
     font-size: 9vw;
     margin-top: 2.8%;

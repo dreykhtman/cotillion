@@ -105,7 +105,17 @@
   }
 
   #album-the-debutantes {
+    position: relative;
     grid-row: 3 / span 1;
+
+    .debutantes-logo {
+      position: absolute;
+      bottom: 20.1%;
+      left: 2.5%;
+      font-size: 5vw;
+      font-family: $font-logo;
+      color: white;
+    }
   }
 
   #album-two-years {
@@ -156,10 +166,21 @@
 // }
 
 .cotillion-album-logo {
-  // position: absolute;
-  font-family: $font-logo;
-  color: $color-text;
-  display: inline-block;
+  top: -100vh;
+  // // position: absolute;
+  // font-family: $font-logo;
+  // color: $color-text;
+  // display: inline-block;
+
+  &--td {
+    position: absolute;
+    height: 0;
+
+    margin-left: -20vw;
+    top: 250vh;
+    font-size: 6vw;
+    color: black;
+  }
 
   &--c {
     // top: 2.5vh;
@@ -176,8 +197,5 @@
   }
 
   &--ty {
-  }
-
-  &--td {
   }
 }
