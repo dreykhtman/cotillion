@@ -21,3 +21,34 @@ body {
   font-size: $font-size-large;
   text-align: center;
 }
+
+#the-debutantes-cover-logo {
+  filter: blur(2rem);
+  opacity: 0;
+
+  font-size: 5vw;
+  top: 62.5%;
+  left: 2.5%;
+  color: black;
+}
+
+#two-years-cover-logo {
+  font-size: 2.6vw;
+  left: 51.1%;
+  top: 88.9%;
+  color: royalblue;
+}
+
+#korean-fan-death-cover-logo {
+  font-size: 2.6vw;
+  left: 48.6%;
+  top: 88.9%;
+  color: royalblue;
+}
+
+#cotillion-cover-logo {
+  font-size: 8.77vw;
+  left: 7.1%;
+  top: 2.95%;
+  color: white;
+}

@@ -102,6 +102,32 @@ body {
   font-size: 7rem;
   text-align: center; }
 
+#the-debutantes-cover-logo {
+  filter: blur(2rem);
+  opacity: 0;
+  font-size: 5vw;
+  top: 62.5%;
+  left: 2.5%;
+  color: black; }
+
+#two-years-cover-logo {
+  font-size: 2.6vw;
+  left: 51.1%;
+  top: 88.9%;
+  color: royalblue; }
+
+#korean-fan-death-cover-logo {
+  font-size: 2.6vw;
+  left: 48.6%;
+  top: 88.9%;
+  color: royalblue; }
+
+#cotillion-cover-logo {
+  font-size: 8.77vw;
+  left: 7.1%;
+  top: 2.95%;
+  color: white; }
+
 .cotillion-album-logo {
   top: -100vh; }
   .cotillion-album-logo--td {
@@ -116,13 +142,24 @@ body {
     margin-top: 2.8%;
     margin-left: 6.8%; }
 
+.album {
+  grid-column: 2 / span 1;
+  position: relative; }
+  .album__cover-logo {
+    position: absolute; }
+  .album > img {
+    width: 100%;
+    height: 100%; }
+
 .albums {
   grid-column: full-start / full-end;
-  row-gap: 15vh;
+  row-gap: 15rem;
   display: grid;
   grid-template-rows: 70vh 70vh repeat(4, 1fr);
   grid-template-columns: 3fr 4fr 3fr;
-  position: relative; }
+  position: relative;
+  color: #f0f0f0;
+  font-family: "Levenim", sans-serif; }
   .albums__logo {
     grid-row: 1 / span 1;
     grid-column: 1 / -1;
@@ -136,27 +173,13 @@ body {
     grid-row: 2 / span 1;
     grid-column: 1 / -1; }
   .albums #album-the-debutantes {
-    position: relative;
     grid-row: 3 / span 1; }
-    .albums #album-the-debutantes #debutantes-logo {
-      filter: blur(2rem);
-      opacity: 0;
-      position: absolute;
-      bottom: 20%;
-      left: 2.5%;
-      font-size: 5vw;
-      font-family: "Levenim", sans-serif;
-      color: black; }
   .albums #album-two-years {
     grid-row: 4 / span 1; }
   .albums #album-korean-fan-death {
     grid-row: 5 / span 1; }
   .albums #album-cotillion {
     grid-row: 6 / span 1; }
-  .albums .album {
-    grid-column: 2 / span 1; }
-    .albums .album > img {
-      width: 100%; }
 
 .description {
   display: grid;
