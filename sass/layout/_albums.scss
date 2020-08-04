@@ -1,0 +1,72 @@
+.albums {
+  grid-column: full-start / full-end;
+  row-gap: 15vh;
+
+  display: grid;
+  grid-template-rows: 70vh 70vh repeat(4, 1fr);
+  grid-template-columns: 3fr 4fr 3fr;
+
+  position: relative;
+
+  &__logo {
+    grid-row: 1 / span 1;
+    grid-column: 1 / -1;
+
+    position: sticky;
+    top: 0;
+    margin-top: -40vh;
+    // margin-top: 25vh;
+    // grid-row: -2 / -1;
+    justify-self: center;
+    // height: 300vh;
+  }
+
+  #jumping-logo {
+    transition: all 0.2s;
+    // z-index: 2;
+  }
+
+  &__heading {
+    grid-row: 2 / span 1;
+    grid-column: 1 / -1;
+    // z-index: 1;
+  }
+
+  #album-the-debutantes {
+    position: relative;
+    grid-row: 3 / span 1;
+
+    #debutantes-logo {
+      filter: blur(2rem);
+      opacity: 0;
+
+      position: absolute;
+      bottom: 20%;
+      left: 2.5%;
+      font-size: 5vw;
+      font-family: $font-logo;
+      color: black;
+    }
+  }
+
+  #album-two-years {
+    grid-row: 4 / span 1;
+  }
+
+  #album-korean-fan-death {
+    grid-row: 5 / span 1;
+  }
+
+  #album-cotillion {
+    grid-row: 6 / span 1;
+  }
+
+  .album {
+    grid-column: 2 / span 1;
+
+    & > img {
+      width: 100%;
+      // height: 100%;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.description {
+  display: grid;
+  grid-template-rows: 70vh min-content 70vh;
+  grid-template-columns: repeat(3, minmax(max-content, 1fr));
+
+  &__is-100 {
+    display: inline-block;
+    position: sticky;
+    top: 8vh;
+    grid-row: 1 / span 1;
+    grid-column: 1 / -1;
+    justify-self: center;
+
+    #is {
+      margin-bottom: 6rem;
+    }
+
+    #hundred {
+      transition: all 0.8s cubic-bezier(0, 0.9, 0.07, 0.85) 0.4s;
+    }
+  }
+
+  &__list {
+    grid-row: 2 / span 1;
+    list-style: none;
+    color: $color-text;
+    font-size: $font-size-medium;
+
+    & > li {
+      padding: 1.5rem 2rem;
+      position: sticky;
+    }
+
+    @for $i from 1 through 5 {
+      & > :nth-child(#{$i}) {
+        top: ($i * 13vh) + 16vh;
+        margin-bottom: 85vh - $i * 13vh;
+      }
+    }
+
+    & > :first-child {
+      transition: all 0.2s cubic-bezier(1, 0.31, 1, 1.14);
+      top: 23vh;
+    }
+
+    & > :last-child {
+      text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+    }
+
+    &--dima {
+      grid-column: -2 /-1;
+    }
+  }
+}
