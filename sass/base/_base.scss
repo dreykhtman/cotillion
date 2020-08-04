@@ -1,17 +1,3 @@
-@font-face {
-  font-family: 'Levenim';
-  src: local('Levenim MT'), url('../public/font/lvnm.woff') format('woff');
-}
-
-// Variables
-$font-primary: 'Roboto Slab', serif;
-$font-logo: 'Levenim', sans-serif;
-
-$font-size-large: 7rem;
-$font-size-medium: 4rem;
-
-$color-text: #f0f0f0;
-
 // Reset
 *,
 *::before,
@@ -24,10 +10,6 @@ $color-text: #f0f0f0;
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-}
-
-body {
-  font-family: $font-primary;
 }
 
 .container {

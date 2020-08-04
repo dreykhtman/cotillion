@@ -1,0 +1,56 @@
+.slide-right {
+  transform: translateX(25vw);
+  opacity: 0;
+}
+
+.slide-left {
+  transform: translateX(-25vw);
+  opacity: 0;
+}
+
+.slide-hidden {
+  transform: translateY(-6rem);
+  opacity: 0;
+}
+
+.slide-down {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.animation {
+  animation-name: fadeout;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.animation-fadein {
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeout {
+  0% {
+    filter: blur(0);
+    opacity: 1;
+  }
+
+  100% {
+    filter: blur(2rem);
+    opacity: 0;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    filter: blur(2rem);
+    opacity: 0;
+  }
+
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}

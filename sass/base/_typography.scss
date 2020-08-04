@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Levenim';
+  src: local('Levenim MT'), url('../public/font/lvnm.woff') format('woff');
+}
+
+body {
+  font-family: $font-primary;
+}
+
+.logo {
+  display: inline-block;
+  font-family: $font-logo;
+  font-size: 30rem;
+  font-weight: 400;
+  color: $color-text;
+  margin-top: 2rem;
+}
+
+.heading-2 {
+  color: $color-text;
+  font-size: $font-size-large;
+  text-align: center;
+}

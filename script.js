@@ -2,7 +2,7 @@ const targetList = document.getElementById('target-list');
 const fiftyLeft = document.getElementById('fifty-left');
 const fiftyRight = document.getElementById('fifty-right');
 const hundred = document.getElementById('hundred');
-const albumCotillion = document.getElementById('album-cotillion');
+const debutantesLogo = document.getElementById('debutantes-logo');
 const jumpingLogo = document.getElementById('jumping-logo');
 const albums = document.querySelectorAll('.album');
 
@@ -45,7 +45,8 @@ const artCallback = (entries, observer) => {
       entry.boundingClientRect.y > 0
     ) {
       console.log('Hello!');
-      jumpingLogo.classList.add('debutantes-logo');
+      jumpingLogo.classList.add('animation');
+      debutantesLogo.classList.add('animation-fadein');
     }
   });
 };
