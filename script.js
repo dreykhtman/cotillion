@@ -2,7 +2,6 @@ const targetList = document.getElementById('target-list');
 const fiftyLeft = document.getElementById('fifty-left');
 const fiftyRight = document.getElementById('fifty-right');
 const hundred = document.getElementById('hundred');
-const theDebutantesLogo = document.getElementById('the-debutantes-cover-logo');
 const jumpingLogo = document.getElementById('jumping-logo');
 const albums = document.querySelectorAll('.album');
 
@@ -34,8 +33,45 @@ observer.observe(targetList);
 // Another intersection observer
 const artOptions = {
   root: null,
-  rootMargin: '0px 0px -50% 0px',
+  rootMargin: '0px 0px -60% 0px',
   threshold: 0,
+};
+
+const coverStack = [];
+
+const classToggler = (id) => {
+  // const toggleCurrent = () => {
+  //   const selectedElement = document.getElementById(id);
+  //   if (selectedElement) {
+  //     selectedElement.classList.toggle('animation-fadeout');
+  //     selectedElement.classList.toggle('animation-fadein');
+  //   }
+  // };
+
+  const togglePrevious = () => {
+    const selectedElement = document.getElementById(
+      coverStack[coverStack.length - 1]
+    );
+
+    if (selectedElement) {
+      console.log('toggled');
+      selectedElement.classList.toggle('animation-fadeout');
+      selectedElement.classList.toggle('animation-fadein');
+    } else {
+      jumpingLogo.classList.toggle('animation-fadeout');
+      jumpingLogo.classList.toggle('animation-fadein');
+    }
+  };
+
+  if (coverStack[coverStack.length - 1] !== id) {
+    togglePrevious();
+    coverStack.push(id);
+    togglePrevious();
+  } else {
+    togglePrevious();
+    coverStack.pop();
+    togglePrevious();
+  }
 };
 
 const artCallback = (entries, observer) => {
@@ -44,9 +80,7 @@ const artCallback = (entries, observer) => {
       entry.boundingClientRect.y <= window.scrollY &&
       entry.boundingClientRect.y > 0
     ) {
-      console.log('Hello!');
-      jumpingLogo.classList.add('animation');
-      theDebutantesLogo.classList.add('animation-fadein');
+      classToggler(entry.target.children[0].id);
     }
   });
 };

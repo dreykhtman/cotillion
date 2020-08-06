@@ -18,7 +18,12 @@
   opacity: 1;
 }
 
-.animation {
+.album__cover-logo {
+  filter: blur(2rem);
+  opacity: 0;
+}
+
+.animation-fadeout {
   animation-name: fadeout;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -27,7 +32,7 @@
 .animation-fadein {
   animation-name: fadein;
   animation-duration: 1s;
-  animation-delay: 0.1s;
+  animation-delay: 0.3s;
   animation-fill-mode: forwards;
 }
 

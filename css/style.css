@@ -14,7 +14,11 @@
   transform: translateY(0);
   opacity: 1; }
 
-.animation {
+.album__cover-logo {
+  filter: blur(2rem);
+  opacity: 0; }
+
+.animation-fadeout {
   animation-name: fadeout;
   animation-duration: 1s;
   animation-fill-mode: forwards; }
@@ -22,7 +26,7 @@
 .animation-fadein {
   animation-name: fadein;
   animation-duration: 1s;
-  animation-delay: 0.1s;
+  animation-delay: 0.3s;
   animation-fill-mode: forwards; }
 
 @keyframes fadeout {
@@ -103,8 +107,6 @@ body {
   text-align: center; }
 
 #the-debutantes-cover-logo {
-  filter: blur(2rem);
-  opacity: 0;
   font-size: 5vw;
   top: 62.5%;
   left: 2.5%;
@@ -113,20 +115,17 @@ body {
 #two-years-cover-logo {
   font-size: 2.6vw;
   left: 51.1%;
-  top: 88.9%;
-  color: royalblue; }
+  top: 89.3%; }
 
 #korean-fan-death-cover-logo {
   font-size: 2.6vw;
   left: 48.6%;
-  top: 88.9%;
-  color: royalblue; }
+  top: 89.1%; }
 
 #cotillion-cover-logo {
   font-size: 8.77vw;
   left: 7.1%;
-  top: 2.95%;
-  color: white; }
+  top: 2.95%; }
 
 .cotillion-album-logo {
   top: -100vh; }
@@ -159,26 +158,27 @@ body {
   grid-template-columns: 3fr 4fr 3fr;
   position: relative;
   color: #f0f0f0;
-  font-family: "Levenim", sans-serif; }
+  font-family: "Levenim", sans-serif;
+  font-weight: 400; }
   .albums__logo {
     grid-row: 1 / span 1;
     grid-column: 1 / -1;
     position: sticky;
     top: 0;
     margin-top: -40vh;
-    justify-self: center; }
-  .albums #jumping-logo {
-    transition: all 0.2s; }
+    justify-self: center;
+    filter: blur(2rem);
+    opacity: 0; }
   .albums__heading {
     grid-row: 2 / span 1;
     grid-column: 1 / -1; }
-  .albums #album-the-debutantes {
+  .albums #the-debutantes {
     grid-row: 3 / span 1; }
-  .albums #album-two-years {
+  .albums #two-years {
     grid-row: 4 / span 1; }
-  .albums #album-korean-fan-death {
+  .albums #korean-fan-death {
     grid-row: 5 / span 1; }
-  .albums #album-cotillion {
+  .albums #cotillion {
     grid-row: 6 / span 1; }
 
 .description {
