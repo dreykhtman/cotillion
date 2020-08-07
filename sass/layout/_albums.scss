@@ -7,7 +7,7 @@
   grid-template-columns: 3fr 4fr 3fr;
 
   position: relative;
-  color: $color-text;
+  // color: $color-text;
   font-family: $font-logo;
   font-weight: 400;
 
@@ -20,11 +20,17 @@
     justify-self: center;
     filter: blur(2rem);
     opacity: 0;
+
+    & span {
+      z-index: 2;
+    }
   }
 
   &__heading {
     grid-row: 2 / span 1;
     grid-column: 1 / -1;
+    transition: color 2s cubic-bezier(0, 1.25, 0.94, 0.98);
+    // color: $color-text;
   }
 
   #the-debutantes {

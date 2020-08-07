@@ -4,6 +4,7 @@ const fiftyRight = document.getElementById('fifty-right');
 const hundred = document.getElementById('hundred');
 const jumpingLogo = document.getElementById('jumping-logo');
 const albums = document.querySelectorAll('.album');
+const ourAlbums = document.getElementById('our-albums');
 
 // Intersection Observer
 const options = {
@@ -33,7 +34,7 @@ observer.observe(targetList);
 // Another intersection observer
 const artOptions = {
   root: null,
-  rootMargin: '0px 0px -60% 0px',
+  rootMargin: '0px 0px -57% 0px',
   threshold: 0,
 };
 
@@ -54,7 +55,6 @@ const classToggler = (id) => {
     );
 
     if (selectedElement) {
-      console.log('toggled');
       selectedElement.classList.toggle('animation-fadeout');
       selectedElement.classList.toggle('animation-fadein');
     } else {
@@ -78,6 +78,12 @@ const artCallback = (entries, observer) => {
   entries.forEach((entry) => {
     if (
       entry.boundingClientRect.y <= window.scrollY &&
+      entry.boundingClientRect.y > 0 &&
+      entry.target.id === 'our-albums'
+    ) {
+      ourAlbums.classList.toggle('change-color');
+    } else if (
+      entry.boundingClientRect.y <= window.scrollY &&
       entry.boundingClientRect.y > 0
     ) {
       classToggler(entry.target.children[0].id);
@@ -87,6 +93,7 @@ const artCallback = (entries, observer) => {
 
 const artObserver = new IntersectionObserver(artCallback, artOptions);
 albums.forEach((cover) => artObserver.observe(cover));
+artObserver.observe(ourAlbums);
 // for (const cover of albumCovers) {
 //   artObserver.observe(cover)
 // }

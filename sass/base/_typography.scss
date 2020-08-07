@@ -12,24 +12,15 @@ body {
   font-family: $font-logo;
   font-size: 30rem;
   font-weight: 400;
-  color: $color-text;
   margin-top: 2rem;
 }
 
 .heading-2 {
-  color: $color-text;
   font-size: $font-size-large;
   text-align: center;
 }
 
-#jumping-logo {
-  // transition: all 0.2s;
-}
-
 #the-debutantes-cover-logo {
-  // filter: blur(2rem);
-  // opacity: 0;
-
   font-size: 5vw;
   top: 62.5%;
   left: 2.5%;

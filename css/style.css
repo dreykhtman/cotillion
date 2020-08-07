@@ -14,6 +14,9 @@
   transform: translateY(0);
   opacity: 1; }
 
+.change-color {
+  color: black; }
+
 .album__cover-logo {
   filter: blur(2rem);
   opacity: 0; }
@@ -60,7 +63,8 @@ html {
   display: grid;
   grid-template-rows: 80vh 1fr min-content;
   grid-template-columns: [full-start] 13vw [content-start] repeat(3, [col-start] 1fr [col-end]) [content-end] 13vw [full-end];
-  background: linear-gradient(to bottom, #4e6c9e, #edac8e); }
+  background: linear-gradient(to bottom, #4e6c9e, #edac8e);
+  color: #f0f0f0; }
 
 /*
 .container {
@@ -98,11 +102,9 @@ body {
   font-family: "Levenim", sans-serif;
   font-size: 30rem;
   font-weight: 400;
-  color: #f0f0f0;
   margin-top: 2rem; }
 
 .heading-2 {
-  color: #f0f0f0;
   font-size: 7rem;
   text-align: center; }
 
@@ -157,7 +159,6 @@ body {
   grid-template-rows: 70vh 70vh repeat(4, 1fr);
   grid-template-columns: 3fr 4fr 3fr;
   position: relative;
-  color: #f0f0f0;
   font-family: "Levenim", sans-serif;
   font-weight: 400; }
   .albums__logo {
@@ -169,9 +170,12 @@ body {
     justify-self: center;
     filter: blur(2rem);
     opacity: 0; }
+    .albums__logo span {
+      z-index: 2; }
   .albums__heading {
     grid-row: 2 / span 1;
-    grid-column: 1 / -1; }
+    grid-column: 1 / -1;
+    transition: color 2s cubic-bezier(0, 1.25, 0.94, 0.98); }
   .albums #the-debutantes {
     grid-row: 3 / span 1; }
   .albums #two-years {
