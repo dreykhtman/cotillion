@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="container">
-      <header class="header">
+      <header id="top" class="header">
         <h1 class="logo">Cotillion</h1>
       </header>
 
@@ -34,7 +34,7 @@
           <ul class="description__list description__list--dima">
             <li id="fifty-right" class="heading-2">50%</li>
             <li>New York</li>
-            <li>Drums</li>
+            <li id="about">Drums</li>
             <li>Web & Design</li>
             <li>Dima Reykhtman</li>
           </ul>
@@ -46,61 +46,98 @@
           <span>Cotillion</span>
         </div>
         <div id="our-albums" class="albums__heading heading-2">Our Albums</div>
-        <div id="album-the-debutantes" class="album">
-          <div
-            id="the-debutantes-cover-logo"
-            class="album__cover-logo animation-fadeout"
-          >
-            Cotillion
+
+        <div id="anchor-td" class="album-container">
+          <div id="album-the-debutantes" class="album">
+            <div
+              id="the-debutantes-cover-logo"
+              class="album__cover-logo animation-fadeout"
+            >
+              Cotillion
+            </div>
+            <img
+              src="./public/img/the-debutantes.jpg"
+              alt="The Debutantes album cover"
+            />
           </div>
-          <img
-            src="./public/img/the-debutantes.jpg"
-            alt="The Debutantes album cover"
-          />
         </div>
+
         <div class="player">BC player</div>
 
-        <div id="album-two-years" class="album">
-          <div
-            id="two-years-cover-logo"
-            class="album__cover-logo animation-fadeout"
-          >
-            Cotillion
-          </div>
+        <div id="anchor-ty" class="album-container">
+          <div id="album-two-years" class="album">
+            <div
+              id="two-years-cover-logo"
+              class="album__cover-logo animation-fadeout"
+            >
+              Cotillion
+            </div>
 
-          <img src="./public/img/two-years.jpg" alt="Two Years album cover" />
+            <img src="./public/img/two-years.jpg" alt="Two Years album cover" />
+          </div>
         </div>
+
         <div class="player">BC player</div>
 
-        <div id="album-korean-fan-death" class="album">
-          <div
-            id="korean-fan-death-cover-logo"
-            class="album__cover-logo animation-fadeout"
-          >
-            Cotillion
+        <div id="anchor-kfd" class="album-container">
+          <div id="album-korean-fan-death" class="album">
+            <div
+              id="korean-fan-death-cover-logo"
+              class="album__cover-logo animation-fadeout"
+            >
+              Cotillion
+            </div>
+            <img
+              src="./public/img/korean-fan-death.jpg"
+              alt="Korean Fan Death album cover"
+            />
           </div>
-          <img
-            src="./public/img/korean-fan-death.jpg"
-            alt="Korean Fan Death album cover"
-          />
         </div>
+
         <div class="player">BC player</div>
 
-        <div id="album-cotillion" class="album">
-          <div
-            id="cotillion-cover-logo"
-            class="album__cover-logo animation-fadeout"
-          >
-            Cotillion
+        <div id="anchor-c" class="album-container">
+          <div id="album-cotillion" class="album">
+            <div
+              id="cotillion-cover-logo"
+              class="album__cover-logo animation-fadeout"
+            >
+              Cotillion
+            </div>
+            <img src="./public/img/cotillion.jpg" alt="Cotillion album cover" />
           </div>
-          <img src="./public/img/cotillion.jpg" alt="Cotillion album cover" />
         </div>
         <div class="player">BC player</div>
       </div>
 
-      <!-- <footer>
+      <footer class="footer">
         Built by Dima Reykhman
-      </footer> -->
+      </footer>
     </div>
+
+    <nav class="navbar">
+      <ul class="navbar__list">
+        <li>
+          <span id="active-top"></span
+          ><a class="section-link" href="#top">Top</a>
+        </li>
+        <li>
+          <span id="active-the-debutantes"></span
+          ><a class="section-link" href="#anchor-td">The Debutantes</a>
+        </li>
+        <li>
+          <span id="active-two-years"></span
+          ><a class="section-link" href="#anchor-ty">Two Years</a>
+        </li>
+        <li>
+          <span id="active-korean-fan-death"></span
+          ><a class="section-link" href="#anchor-kfd">Korean Fan Death</a>
+        </li>
+        <li>
+          <span id="active-cotillion"></span
+          ><a class="section-link" href="#anchor-c">Cotillion</a>
+        </li>
+      </ul>
+    </nav>
   </body>
 </html>

@@ -1,6 +1,7 @@
 .album {
-  grid-column: 2 / span 1;
   position: relative;
+
+  // padding-top: 7rem;
 
   &__cover-logo {
     position: absolute;
@@ -10,4 +11,9 @@
     width: 100%;
     height: 100%;
   }
+}
+
+.album-container {
+  grid-column: 2 / span 1;
+  padding-top: 7rem;
 }

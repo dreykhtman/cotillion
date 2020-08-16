@@ -10,16 +10,18 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 .container {
   display: grid;
-  grid-template-rows: 80vh 1fr min-content;
+  grid-template-rows: 80vh 1fr min-content 66vh;
   grid-template-columns:
     [full-start] 13vw [content-start] repeat(3, [col-start] 1fr [col-end])
     [content-end] 13vw [full-end];
 
-  background: linear-gradient(to bottom, #4e6c9e, #edac8e);
+  // background: linear-gradient(to bottom, #4e6c9e, #edac8e);
+  background: linear-gradient(to bottom, #4e6c9e, #edac8e, #6f79d8);
   // height: 5000px;
   color: $color-text;
 }

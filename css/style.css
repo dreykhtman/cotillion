@@ -57,13 +57,14 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
 
 .container {
   display: grid;
-  grid-template-rows: 80vh 1fr min-content;
+  grid-template-rows: 80vh 1fr min-content 66vh;
   grid-template-columns: [full-start] 13vw [content-start] repeat(3, [col-start] 1fr [col-end]) [content-end] 13vw [full-end];
-  background: linear-gradient(to bottom, #4e6c9e, #edac8e);
+  background: linear-gradient(to bottom, #4e6c9e, #edac8e, #6f79d8);
   color: #f0f0f0; }
 
 /*
@@ -129,6 +130,7 @@ body {
   left: 7.1%;
   top: 2.95%; }
 
+/* Not used*/
 .cotillion-album-logo {
   top: -100vh; }
   .cotillion-album-logo--td {
@@ -144,13 +146,16 @@ body {
     margin-left: 6.8%; }
 
 .album {
-  grid-column: 2 / span 1;
   position: relative; }
   .album__cover-logo {
     position: absolute; }
   .album > img {
     width: 100%;
     height: 100%; }
+
+.album-container {
+  grid-column: 2 / span 1;
+  padding-top: 7rem; }
 
 .albums {
   grid-column: full-start / full-end;
@@ -176,14 +181,6 @@ body {
     grid-row: 2 / span 1;
     grid-column: 1 / -1;
     transition: color 2s cubic-bezier(0, 1.25, 0.94, 0.98); }
-  .albums #the-debutantes {
-    grid-row: 3 / span 1; }
-  .albums #two-years {
-    grid-row: 4 / span 1; }
-  .albums #korean-fan-death {
-    grid-row: 5 / span 1; }
-  .albums #cotillion {
-    grid-row: 6 / span 1; }
 
 .description {
   display: grid;
@@ -231,6 +228,11 @@ body {
     .description__list--dima {
       grid-column: -2 /-1; }
 
+.footer {
+  grid-row: -1 / -2;
+  grid-column: col-start 2 / col-end 2;
+  align-self: end; }
+
 .header {
   grid-column: 1 / -1;
   grid-row: 1 / span 1;
@@ -238,3 +240,24 @@ body {
 
 .main {
   grid-column: content-start / content-end; }
+
+.navbar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 2rem;
+  color: #f0f0f0;
+  white-space: nowrap; }
+  .navbar__list {
+    list-style: none;
+    font-size: 2rem; }
+    .navbar__list > li {
+      position: relative;
+      border: 2px solid currentColor;
+      height: 2.6rem;
+      width: 2.6rem;
+      margin: 1rem;
+      border-radius: 50%; }
+      .navbar__list > li > .section-link {
+        position: absolute;
+        left: 4rem; }

@@ -7,7 +7,6 @@
   grid-template-columns: 3fr 4fr 3fr;
 
   position: relative;
-  // color: $color-text;
   font-family: $font-logo;
   font-weight: 400;
 
@@ -33,19 +32,19 @@
     // color: $color-text;
   }
 
-  #the-debutantes {
-    grid-row: 3 / span 1;
-  }
+  // #album-the-debutantes {
+  //   grid-row: 3 / span 1;
+  // }
 
-  #two-years {
-    grid-row: 4 / span 1;
-  }
+  // #album-two-years {
+  //   grid-row: 4 / span 1;
+  // }
 
-  #korean-fan-death {
-    grid-row: 5 / span 1;
-  }
+  // #album-korean-fan-death {
+  //   grid-row: 5 / span 1;
+  // }
 
-  #cotillion {
-    grid-row: 6 / span 1;
-  }
+  // #album-cotillion {
+  //   grid-row: 6 / span 1;
+  // }
 }
