@@ -2,17 +2,20 @@
   position: fixed;
   left: 0;
   bottom: 0;
-  padding: 2rem;
   color: $color-text;
   white-space: nowrap;
 
   &__list {
     list-style: none;
     font-size: $font-size-small;
+    color: transparent;
+    transition: color 0.3s;
+    padding: 1rem 20rem 1.4rem 1.2rem;
 
     & > li {
       position: relative;
-      border: 2px solid currentColor;
+      // css max() doesn't work in sass properly. sass unquote() is a workaround
+      border: unquote('max(2px, 0.2rem)') solid $color-navbar;
       height: 2.6rem;
       width: 2.6rem;
       margin: 1rem;
@@ -20,8 +23,39 @@
 
       & > .section-link {
         position: absolute;
-        left: 4rem;
+        left: 3.4rem;
+        top: -0.2rem;
       }
+
+      &:not(:last-child)::before {
+        content: '';
+        position: absolute;
+        border: 0.1rem solid $color-navbar;
+        background-color: $color-navbar;
+        height: 1.2rem;
+        left: 1rem;
+        top: 2.4rem;
+      }
+
+      .nav-selected {
+        position: absolute;
+        border-radius: 50%;
+        width: 1.6rem;
+        height: 1.6rem;
+        background-color: $color-navbar;
+        left: 0.3rem;
+        top: 0.3rem;
+      }
+    }
+
+    &:hover {
+      color: inherit;
+    }
+
+    .section-link {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
     }
   }
 }

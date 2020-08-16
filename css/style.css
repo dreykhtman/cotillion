@@ -245,19 +245,44 @@ body {
   position: fixed;
   left: 0;
   bottom: 0;
-  padding: 2rem;
   color: #f0f0f0;
   white-space: nowrap; }
   .navbar__list {
     list-style: none;
-    font-size: 2rem; }
+    font-size: 2rem;
+    color: transparent;
+    transition: color 0.3s;
+    padding: 1rem 20rem 1.4rem 1.2rem; }
     .navbar__list > li {
       position: relative;
-      border: 2px solid currentColor;
+      border: max(2px, 0.2rem) solid #3f3f3f;
       height: 2.6rem;
       width: 2.6rem;
       margin: 1rem;
       border-radius: 50%; }
       .navbar__list > li > .section-link {
         position: absolute;
-        left: 4rem; }
+        left: 3.4rem;
+        top: -0.2rem; }
+      .navbar__list > li:not(:last-child)::before {
+        content: '';
+        position: absolute;
+        border: 0.1rem solid #3f3f3f;
+        background-color: #3f3f3f;
+        height: 1.2rem;
+        left: 1rem;
+        top: 2.4rem; }
+      .navbar__list > li .nav-selected {
+        position: absolute;
+        border-radius: 50%;
+        width: 1.6rem;
+        height: 1.6rem;
+        background-color: #3f3f3f;
+        left: 0.3rem;
+        top: 0.3rem; }
+    .navbar__list:hover {
+      color: inherit; }
+    .navbar__list .section-link {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer; }
