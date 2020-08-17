@@ -164,7 +164,7 @@ body {
   .albums .album-container {
     grid-column: 2 / span 1;
     padding-top: 7rem;
-    padding-bottom: 18rem; }
+    padding-bottom: 10rem; }
   .albums__logo {
     grid-row: 1 / span 1;
     grid-column: 1 / -1;
@@ -238,7 +238,11 @@ body {
   justify-self: center; }
 
 .main {
-  grid-column: content-start / content-end; }
+  grid-column: content-start / content-end;
+  padding-bottom: 140vh;
+  margin-bottom: -140vh;
+  padding-top: 80vh;
+  margin-top: -80vh; }
 
 .navbar {
   position: fixed;
