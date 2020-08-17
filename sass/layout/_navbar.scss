@@ -34,7 +34,7 @@
         background-color: $color-navbar;
         height: 1.2rem;
         left: 1rem;
-        top: 2.4rem;
+        top: 2.3rem;
       }
 
       .nav-selected {
@@ -42,9 +42,13 @@
         border-radius: 50%;
         width: 1.6rem;
         height: 1.6rem;
-        background-color: $color-navbar;
+        background-color: transparent;
         left: 0.3rem;
         top: 0.3rem;
+      }
+
+      .active {
+        background-color: $color-navbar;
       }
     }
 

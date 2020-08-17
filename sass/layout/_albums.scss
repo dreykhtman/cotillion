@@ -1,6 +1,12 @@
 .albums {
+  .album-container {
+    grid-column: 2 / span 1;
+    padding-top: 7rem;
+    padding-bottom: 18rem;
+  }
+
   grid-column: full-start / full-end;
-  row-gap: 15rem;
+  // row-gap: 15rem;
 
   display: grid;
   grid-template-rows: 70vh 70vh repeat(4, 1fr);

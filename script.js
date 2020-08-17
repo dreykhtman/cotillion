@@ -6,21 +6,16 @@ const jumpingLogo = document.getElementById('jumping-logo');
 const albums = document.querySelectorAll('.album');
 const ourAlbums = document.getElementById('our-albums');
 
-// Intersection Observer
+// Observer for the 50% element slide animation
 const options = {
   root: null,
   rootMargin: '-100% 0px 0px 0px',
   threshold: 0,
 };
 
-// const description = document.querySelector('.description');
-// console.log(description);
-
 const callback = (entries, observer) => {
   entries.forEach((entry) => {
     if (entry.boundingClientRect.y < 0) {
-      // fiftyLeft.classList.toggle('slide-default');
-      // fiftyRight.classList.toggle('slide-default');
       fiftyLeft.classList.toggle('slide-right');
       fiftyRight.classList.toggle('slide-left');
       hundred.classList.toggle('slide-down');
@@ -31,7 +26,7 @@ const callback = (entries, observer) => {
 const observer = new IntersectionObserver(callback, options);
 observer.observe(targetList);
 
-// Another intersection observer
+// Observer for the jumping logo
 const artOptions = {
   root: null,
   rootMargin: '0px 0px -57% 0px',
@@ -41,14 +36,6 @@ const artOptions = {
 const coverStack = [];
 
 const classToggler = (id) => {
-  // const toggleCurrent = () => {
-  //   const selectedElement = document.getElementById(id);
-  //   if (selectedElement) {
-  //     selectedElement.classList.toggle('animation-fadeout');
-  //     selectedElement.classList.toggle('animation-fadein');
-  //   }
-  // };
-
   const togglePrevious = () => {
     const selectedElement = document.getElementById(
       coverStack[coverStack.length - 1]
@@ -94,6 +81,29 @@ const artCallback = (entries, observer) => {
 const artObserver = new IntersectionObserver(artCallback, artOptions);
 albums.forEach((cover) => artObserver.observe(cover));
 artObserver.observe(ourAlbums);
-// for (const cover of albumCovers) {
-//   artObserver.observe(cover)
-// }
+
+// Navbar observer
+// const navSelected = document.getElementsByClassName('nav-selected');
+const sections = document.querySelectorAll('.section');
+console.log(sections);
+
+const navbarOptions = {
+  root: null,
+  rootMargin: '-50% 0px -50% 0px',
+  threshold: 0,
+};
+
+const navbarCallback = (entries, observer) => {
+  entries.forEach((entry) => {
+    console.log(entry.target.id);
+    const element = document.getElementById(`active-${entry.target.id}`);
+    if (entry.isIntersecting) {
+      element.classList.add('active');
+    } else {
+      element.classList.remove('active');
+    }
+  });
+};
+
+const navbarObserver = new IntersectionObserver(navbarCallback, navbarOptions);
+sections.forEach((section) => navbarObserver.observe(section));
