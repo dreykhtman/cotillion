@@ -6,7 +6,12 @@ const jumpingLogo = document.getElementById('jumping-logo');
 const albums = document.querySelectorAll('.album');
 const ourAlbums = document.getElementById('our-albums');
 
+//
+//
 // Observer for the 50% element slide animation
+//
+//
+
 const options = {
   root: null,
   rootMargin: '-100% 0px 0px 0px',
@@ -26,7 +31,12 @@ const callback = (entries, observer) => {
 const observer = new IntersectionObserver(callback, options);
 observer.observe(targetList);
 
-// Observer for the jumping logo
+//
+//
+// Jumping logo observer
+//
+//
+
 const artOptions = {
   root: null,
   rootMargin: '0px 0px -57% 0px',
@@ -82,7 +92,12 @@ const artObserver = new IntersectionObserver(artCallback, artOptions);
 albums.forEach((cover) => artObserver.observe(cover));
 artObserver.observe(ourAlbums);
 
+//
+//
 // Navbar observer
+//
+//
+
 // const navSelected = document.getElementsByClassName('nav-selected');
 const sections = document.querySelectorAll('.section');
 console.log(sections);

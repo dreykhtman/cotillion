@@ -1,7 +1,7 @@
 .album {
+  // display: flex; fixes the difference of allignment of the logos between browsers and also fixes the logos moving when resizing the page
+  display: flex;
   position: relative;
-
-  // padding-top: 7rem;
 
   &__cover-logo {
     position: absolute;

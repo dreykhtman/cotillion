@@ -118,17 +118,17 @@ body {
 #two-years-cover-logo {
   font-size: 2.6vw;
   left: 51.1%;
-  top: 89.3%; }
+  top: 89.7%; }
 
 #korean-fan-death-cover-logo {
   font-size: 2.6vw;
   left: 48.6%;
-  top: 89.1%; }
+  top: 89.7%; }
 
 #cotillion-cover-logo {
   font-size: 8.77vw;
   left: 7.1%;
-  top: 2.95%; }
+  top: 2.8%; }
 
 /* Not used*/
 .cotillion-album-logo {
@@ -146,6 +146,7 @@ body {
     margin-left: 6.8%; }
 
 .album {
+  display: flex;
   position: relative; }
   .album__cover-logo {
     position: absolute; }
