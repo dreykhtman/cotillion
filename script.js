@@ -1,16 +1,13 @@
-const targetList = document.getElementById('target-list');
-const fiftyLeft = document.getElementById('fifty-left');
-const fiftyRight = document.getElementById('fifty-right');
-const hundred = document.getElementById('hundred');
-const jumpingLogo = document.getElementById('jumping-logo');
-const albums = document.querySelectorAll('.album');
-const ourAlbums = document.getElementById('our-albums');
-
 //
 //
 // Observer for the 50% element slide animation
 //
 //
+
+const targetList = document.getElementById('target-list');
+const fiftyLeft = document.getElementById('fifty-left');
+const fiftyRight = document.getElementById('fifty-right');
+const hundred = document.getElementById('hundred');
 
 const options = {
   root: null,
@@ -36,6 +33,11 @@ observer.observe(targetList);
 // Jumping logo observer
 //
 //
+
+/*
+const jumpingLogo = document.getElementById('jumping-logo');
+const albums = document.querySelectorAll('.album');
+const ourAlbums = document.getElementById('our-albums');
 
 const artOptions = {
   root: null,
@@ -91,6 +93,7 @@ const artCallback = (entries, observer) => {
 const artObserver = new IntersectionObserver(artCallback, artOptions);
 albums.forEach((cover) => artObserver.observe(cover));
 artObserver.observe(ourAlbums);
+*/
 
 //
 //
@@ -100,7 +103,6 @@ artObserver.observe(ourAlbums);
 
 // const navSelected = document.getElementsByClassName('nav-selected');
 const sections = document.querySelectorAll('.section');
-console.log(sections);
 
 const navbarOptions = {
   root: null,
@@ -110,13 +112,46 @@ const navbarOptions = {
 
 const navbarCallback = (entries, observer) => {
   entries.forEach((entry) => {
-    console.log(entry.target.id);
-    const element = document.getElementById(`active-${entry.target.id}`);
+    // Section is either an album name (e.g.'two-years') or 'top'
+    const section = entry.target.id.replace('anchor-', '');
+    // Add modifiers to section to get different elements by id
+    const navbarSection = document.getElementById(`active-${section}`);
+    const currentAlbumCoverLogo = document.getElementById(
+      `${section}-cover-logo`
+    );
+    const jumpingLogo = document.getElementById('jumping-logo');
+
     if (entry.isIntersecting) {
-      element.classList.add('active');
+      navbarSection.classList.add('active');
     } else {
-      element.classList.remove('active');
+      navbarSection.classList.remove('active');
     }
+
+    if (currentAlbumCoverLogo) {
+      if (entry.isIntersecting) {
+        currentAlbumCoverLogo.classList.remove('animation-fadeout');
+        currentAlbumCoverLogo.classList.add('animation-fadein');
+      } else {
+        currentAlbumCoverLogo.classList.remove('animation-fadein');
+        currentAlbumCoverLogo.classList.add('animation-fadeout');
+      }
+    } else {
+      if (entry.isIntersecting) {
+        jumpingLogo.classList.add('animation-fadein');
+        jumpingLogo.classList.remove('animation-fadeout');
+      } else {
+        jumpingLogo.classList.add('animation-fadeout');
+        jumpingLogo.classList.remove('animation-fadein');
+      }
+    }
+
+    // if (entry.isIntersecting && currentAlbumCoverLogo) {
+    //   currentAlbumCoverLogo.classList.remove('animation-fadeout');
+    //   currentAlbumCoverLogo.classList.add('animation-fadein');
+    // } else if (currentAlbumCoverLogo && !entry.isIntersecting) {
+    //   currentAlbumCoverLogo.classList.add('animation-fadeout');
+    //   currentAlbumCoverLogo.classList.remove('animation-fadein');
+    // }
   });
 };
 
