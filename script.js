@@ -103,6 +103,7 @@ artObserver.observe(ourAlbums);
 
 // const navSelected = document.getElementsByClassName('nav-selected');
 const sections = document.querySelectorAll('.section');
+const ourAlbums = document.getElementById('our-albums');
 
 const navbarOptions = {
   root: null,
@@ -112,6 +113,15 @@ const navbarOptions = {
 
 const navbarCallback = (entries, observer) => {
   entries.forEach((entry) => {
+    if (entry.target.id === 'our-albums') {
+      if (entry.isIntersecting) {
+        ourAlbums.classList.add('change-color');
+      } else {
+        ourAlbums.classList.remove('change-color');
+      }
+      return;
+    }
+
     // Section is either an album name (e.g.'two-years') or 'top'
     const section = entry.target.id.replace('anchor-', '');
     // Add modifiers to section to get different elements by id
@@ -135,7 +145,9 @@ const navbarCallback = (entries, observer) => {
         currentAlbumCoverLogo.classList.remove('animation-fadein');
         currentAlbumCoverLogo.classList.add('animation-fadeout');
       }
-    } else {
+    }
+
+    if (currentAlbumCoverLogo === null) {
       if (entry.isIntersecting) {
         jumpingLogo.classList.add('animation-fadein');
         jumpingLogo.classList.remove('animation-fadeout');
@@ -157,3 +169,4 @@ const navbarCallback = (entries, observer) => {
 
 const navbarObserver = new IntersectionObserver(navbarCallback, navbarOptions);
 sections.forEach((section) => navbarObserver.observe(section));
+navbarObserver.observe(ourAlbums);
