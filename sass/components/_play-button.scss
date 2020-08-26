@@ -1,0 +1,54 @@
+.play-button {
+  position: fixed;
+  z-index: 5;
+  top: 8rem;
+  right: 7rem;
+  height: 10rem;
+  width: 10rem;
+  cursor: pointer;
+  transition: background-color 2s;
+  background-color: $color-text;
+
+  &::before {
+    background-color: $color-text;
+    z-index: 6;
+  }
+
+  &:hover {
+    background-color: gray;
+  }
+
+  &--play {
+    clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+    transition: clip-path 0.2s, background-color 0.5s;
+
+    &::before {
+      transition: clip-path 0.2s, width 0.2s 0.1s;
+
+      content: '';
+      position: absolute;
+      height: 8.4rem;
+      width: 8.4rem;
+      left: 0.5rem;
+      top: 0.8rem;
+      clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+    }
+  }
+
+  &--stop {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    transition: clip-path 0.2s, background-color 0.5s;
+
+    &::before {
+      transition: clip-path 0.2s;
+
+      content: '';
+      position: absolute;
+      height: 9rem;
+      width: 9rem;
+      left: 0.5rem;
+      top: 0.5rem;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+  }
+}

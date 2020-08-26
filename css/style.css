@@ -154,6 +154,54 @@ body {
     width: 100%;
     height: 100%; }
 
+.play-button {
+  position: fixed;
+  z-index: 5;
+  top: 8rem;
+  right: 7rem;
+  height: 10rem;
+  width: 10rem;
+  cursor: pointer;
+  transition: background-color 2s;
+  background-color: #f0f0f0; }
+  .play-button::before {
+    background-color: #f0f0f0;
+    z-index: 6; }
+  .play-button:hover {
+    background-color: gray; }
+  .play-button--play {
+    clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+    transition: clip-path 0.2s, background-color 0.5s; }
+    .play-button--play::before {
+      transition: clip-path 0.2s, width 0.2s 0.1s;
+      content: '';
+      position: absolute;
+      height: 8.4rem;
+      width: 8.4rem;
+      left: 0.5rem;
+      top: 0.8rem;
+      clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%); }
+  .play-button--stop {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    transition: clip-path 0.2s, background-color 0.5s; }
+    .play-button--stop::before {
+      transition: clip-path 0.2s;
+      content: '';
+      position: absolute;
+      height: 9rem;
+      width: 9rem;
+      left: 0.5rem;
+      top: 0.5rem;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
+
+.player {
+  align-self: end;
+  justify-self: center;
+  opacity: 0.97;
+  margin-bottom: 10rem;
+  transform: translateX(35vw);
+  transition: all 0.5s; }
+
 .albums {
   grid-column: full-start / full-end;
   display: grid;

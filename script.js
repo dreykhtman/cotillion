@@ -95,3 +95,13 @@ const navbarObserver = new IntersectionObserver(navbarCallback, navbarOptions);
 
 sections.forEach((section) => navbarObserver.observe(section));
 navbarObserver.observe(ourAlbums);
+
+//
+// Play button
+//
+
+const button = document.querySelector('.play-button');
+button.addEventListener('click', () => {
+  button.classList.toggle('play-button--play');
+  button.classList.toggle('play-button--stop');
+});
