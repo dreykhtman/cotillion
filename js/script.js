@@ -1,3 +1,5 @@
+const playButton = document.querySelector('.play-button');
+
 //
 // Observer for the 50% element slide animation
 //
@@ -81,9 +83,13 @@ const navbarCallback = (entries, observer) => {
 
     if (currentAlbumCoverLogo === null) {
       if (entry.isIntersecting) {
+        // playButton.classList.remove('show-button');
+
         jumpingLogo.classList.add('animation-fadein');
         jumpingLogo.classList.remove('animation-fadeout');
       } else {
+        playButton.classList.add('show-button');
+
         jumpingLogo.classList.add('animation-fadeout');
         jumpingLogo.classList.remove('animation-fadein');
       }
@@ -100,8 +106,8 @@ navbarObserver.observe(ourAlbums);
 // Play button
 //
 
-const button = document.querySelector('.play-button');
-button.addEventListener('click', () => {
-  button.classList.toggle('play-button--play');
-  button.classList.toggle('play-button--stop');
+// const button = document.querySelector('.play-button');
+playButton.addEventListener('click', () => {
+  playButton.classList.toggle('play-button--play');
+  playButton.classList.toggle('play-button--stop');
 });

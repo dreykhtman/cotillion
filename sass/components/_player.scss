@@ -1,24 +1,26 @@
 .player {
-  // z-index: 4;
+  z-index: -1;
   align-self: end;
   justify-self: center;
   opacity: 0.97;
   margin-bottom: 10rem;
-  transform: translateX(35vw);
+  transform: translateX(-35vw);
   transition: all 0.5s;
   // position: fixed;
   // bottom: 2rem;
   // right: 2rem;
 }
 
-// .albums__album-container:hover {
-//   & + * {
-//     animation-name: warp;
-//     animation-duration: 0.8s;
-//     animation-fill-mode: forwards;
-//     animation-timing-function: cubic-bezier(0.86, 0.16, 0.49, 0.95);
-//   }
-// }
+.albums__album-container:hover {
+  & + * {
+    transform: translateX(0);
+    z-index: 1;
+    // animation-name: warp;
+    // animation-duration: 0.8s;
+    // animation-fill-mode: forwards;
+    // animation-timing-function: cubic-bezier(0.86, 0.16, 0.49, 0.95);
+  }
+}
 
 // img {
 //   z-index: 5;
