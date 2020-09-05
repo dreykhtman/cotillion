@@ -45,7 +45,6 @@
   animation-duration: 1s;
   animation-delay: 1.5s;
   animation-fill-mode: forwards;
-  animation-direction: alternate;
 }
 
 @keyframes fadeout {
@@ -75,12 +74,8 @@
 @keyframes show {
   0% {
     opacity: 0;
-    visibility: none;
+    visibility: hidden;
   }
-
-  // 1% {
-  //   visibility: visible;
-  // }
 
   100% {
     opacity: 1;
