@@ -2,6 +2,7 @@
   // display: flex; fixes the difference of allignment of the logos between browsers and also fixes the logos moving when resizing the page
   display: flex;
   position: relative;
+  cursor: pointer;
 
   &__cover-logo {
     position: absolute;

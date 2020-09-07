@@ -116,22 +116,21 @@ playButton.addEventListener('click', () => {
 // iframe
 //
 
-const player = document.querySelector('.player__the-debutantes');
-const button = document.querySelector('.play-button');
-button.addEventListener('click', () => {
-  const playersParent = player.parentElement;
-  const playerCopy = player.cloneNode(true);
-  // console.log(playerCopy);
-  playersParent.removeChild(player);
-  playersParent.appendChild(playerCopy);
-});
-
-const iframe = document.querySelector('iframe');
-iframe.addEventListener('click', () => {
-  console.log('iframe clicked');
-});
-
 // click album cover --> player for this album pops up
 // click another cover --> current player leaves, another pops up
 // click same cover --> player leaves
 // play button toggles player
+
+const album = document.querySelectorAll('.album');
+
+album.forEach((a) => {
+  a.addEventListener('click', () => {
+    const clickedAlbumName = a.id.replace('album-', '');
+    const currentAlbumPlayer = document.getElementById(
+      `player-${clickedAlbumName}`
+    );
+    currentAlbumPlayer.classList.toggle('slide-iframe');
+    currentAlbumPlayer.classList.toggle('iframe');
+    // currentAlbumPlayer.style.transform = 'translateX(0)';
+  });
+});
