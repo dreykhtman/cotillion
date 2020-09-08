@@ -129,8 +129,8 @@ album.forEach((a) => {
     const currentAlbumPlayer = document.getElementById(
       `player-${clickedAlbumName}`
     );
-    currentAlbumPlayer.classList.toggle('slide-iframe');
-    currentAlbumPlayer.classList.toggle('iframe');
+    // currentAlbumPlayer.classList.toggle('slide-iframe');
+    currentAlbumPlayer.classList.toggle('hidden-iframe');
     // currentAlbumPlayer.style.transform = 'translateX(0)';
   });
 });

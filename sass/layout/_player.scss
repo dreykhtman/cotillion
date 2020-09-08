@@ -9,28 +9,20 @@
   // border: 5px solid white;
   // transition: all 0.3s;
 
-  .iframe {
+  & > iframe {
     position: absolute;
     top: 0;
     left: 0;
     z-index: 9;
-    transition: all 0.2s;
-    border: 5px solid $color-navbar;
-    transform: translateX(36rem);
     width: 100%;
     height: 100%;
+    border: 5px solid $color-navbar;
+    transition: transform 0.2s;
+
+    background-color: $color-text;
   }
-}
 
-.slide-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 9;
-
-  transition: all 0.2s;
-  border: 5px solid $color-navbar;
-  transform: translateX(0);
-  width: 100%;
-  height: 100%;
+  .hidden-iframe {
+    transform: translateX(36rem);
+  }
 }
