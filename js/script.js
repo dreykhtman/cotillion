@@ -1,4 +1,5 @@
 const playButton = document.querySelector('.play-button');
+const player = document.querySelector('.player');
 
 //
 // Observer for the 50% element slide animation
@@ -110,6 +111,7 @@ navbarObserver.observe(ourAlbums);
 playButton.addEventListener('click', () => {
   playButton.classList.toggle('play-button--play');
   playButton.classList.toggle('play-button--stop');
+  player.classList.toggle('hidden-player');
 });
 
 //

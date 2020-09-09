@@ -358,7 +358,8 @@ body {
   bottom: 18rem;
   right: 4rem;
   width: 31rem;
-  height: 51rem; }
+  height: 51rem;
+  transition: all 0.2s; }
   .player > iframe {
     position: absolute;
     top: 0;
@@ -369,5 +370,6 @@ body {
     border: 5px solid #3f3f3f;
     transition: transform 0.2s;
     background-color: #f0f0f0; }
-  .player .hidden-iframe {
-    transform: translateX(36rem); }
+
+.hidden-player {
+  transform: rotateY(90deg); }

@@ -7,7 +7,7 @@
   width: 31rem;
   height: 51rem;
   // border: 5px solid white;
-  // transition: all 0.3s;
+  transition: all 0.2s;
 
   & > iframe {
     position: absolute;
@@ -22,7 +22,12 @@
     background-color: $color-text;
   }
 
-  .hidden-iframe {
-    transform: translateX(36rem);
-  }
+  // .hidden-iframe {
+  //   transform: translateX(36rem);
+  // }
+}
+
+.hidden-player {
+  // transform-origin: center;
+  transform: rotateY(90deg);
 }
