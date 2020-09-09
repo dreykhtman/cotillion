@@ -57,7 +57,7 @@ const navbarCallback = (entries, observer) => {
       return;
     }
 
-    // Section is either an album name (e.g.'two-years') or 'top'
+    // Section is a string: either an album name (e.g.'two-years') or 'top'
     const section = entry.target.id.replace('anchor-', '');
     // Add modifiers to section to get different elements by id
     const navbarSection = document.getElementById(`active-${section}`);
@@ -72,6 +72,7 @@ const navbarCallback = (entries, observer) => {
       navbarSection.classList.remove('active');
     }
 
+    // If an album is in view
     if (currentAlbumCoverLogo) {
       if (entry.isIntersecting) {
         currentAlbumCoverLogo.classList.remove('animation-fadeout');
@@ -104,19 +105,28 @@ sections.forEach((section) => navbarObserver.observe(section));
 navbarObserver.observe(ourAlbums);
 
 //
-// Play button
+// Player
 //
+
+let buttonIsActive = false;
+let timeout;
+
+const playerToggler = (buttonStatus, element) => {
+  if (buttonStatus) {
+    element.classList.remove('hidden-player');
+  } else {
+    element.classList.add('hidden-player');
+  }
+  playButton.classList.toggle('play-button--play');
+  playButton.classList.toggle('play-button--stop');
+};
 
 // const button = document.querySelector('.play-button');
 playButton.addEventListener('click', () => {
-  playButton.classList.toggle('play-button--play');
-  playButton.classList.toggle('play-button--stop');
-  player.classList.toggle('hidden-player');
-});
+  buttonIsActive = !buttonIsActive;
 
-//
-// iframe
-//
+  playerToggler(buttonIsActive, player);
+});
 
 // click album cover --> player for this album pops up
 // click another cover --> current player leaves, another pops up
@@ -125,14 +135,30 @@ playButton.addEventListener('click', () => {
 
 const album = document.querySelectorAll('.album');
 
+let activePlayerName = 'the-debutantes';
+
 album.forEach((a) => {
   a.addEventListener('click', () => {
     const clickedAlbumName = a.id.replace('album-', '');
     const currentAlbumPlayer = document.getElementById(
       `player-${clickedAlbumName}`
     );
-    // currentAlbumPlayer.classList.toggle('slide-iframe');
-    currentAlbumPlayer.classList.toggle('hidden-iframe');
-    // currentAlbumPlayer.style.transform = 'translateX(0)';
+
+    if (!buttonIsActive) {
+      buttonIsActive = !buttonIsActive;
+      playerToggler(buttonIsActive, player);
+    }
+
+    if (clickedAlbumName !== activePlayerName) {
+      document
+        .getElementById(`player-${activePlayerName}`)
+        .classList.add('hidden-iframe');
+
+      setTimeout(() => {
+        currentAlbumPlayer.classList.remove('hidden-iframe');
+      }, 200);
+
+      activePlayerName = clickedAlbumName;
+    }
   });
 });
