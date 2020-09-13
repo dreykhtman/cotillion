@@ -1,6 +1,3 @@
-const playButton = document.querySelector('.play-button');
-const player = document.querySelector('.player');
-
 //
 // Observer for the 50% element slide animation
 //
@@ -36,6 +33,7 @@ observer.observe(targetList);
 //
 // Navbar & jumping logo observer
 //
+const playButton = document.querySelector('.play-button');
 
 const sections = document.querySelectorAll('.section');
 const ourAlbums = document.getElementById('our-albums');
@@ -107,9 +105,9 @@ navbarObserver.observe(ourAlbums);
 //
 // Player
 //
+const player = document.querySelector('.player');
 
 let buttonIsActive = false;
-let timeout;
 
 const playerToggler = (buttonStatus, element) => {
   if (buttonStatus) {
@@ -144,11 +142,18 @@ album.forEach((a) => {
       `player-${clickedAlbumName}`
     );
 
-    if (!buttonIsActive) {
-      buttonIsActive = !buttonIsActive;
-      playerToggler(buttonIsActive, player);
-    }
+    // if (clickedAlbumName !== activePlayerName && !buttonIsActive) {
+    //   const pl = document.getElementById(`player-${activePlayerName}`);
+    //   pl.style.transition = 'transform 0s';
+    //   pl.classList.add('hidden-iframe');
+    //   currentAlbumPlayer.classList.remove('hidden-iframe');
 
+    //   pl.style.transition = 'transform 0.2s';
+    //   activePlayerName = clickedAlbumName;
+    // }
+
+    // // donut delete
+    // else
     if (clickedAlbumName !== activePlayerName) {
       document
         .getElementById(`player-${activePlayerName}`)
@@ -159,6 +164,12 @@ album.forEach((a) => {
       }, 200);
 
       activePlayerName = clickedAlbumName;
+    }
+
+    if (!buttonIsActive) {
+      buttonIsActive = !buttonIsActive;
+
+      playerToggler(buttonIsActive, player);
     }
   });
 });

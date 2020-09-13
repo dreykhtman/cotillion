@@ -368,10 +368,12 @@ body {
     width: 100%;
     height: 100%;
     border: 0;
-    transition: transform 0.2s; }
+    transition: transform 0.2s;
+    background-color: white; }
 
 .hidden-player {
-  transform: translateX(36rem); }
+  transform: scaleX(0);
+  transform-origin: center; }
 
 .hidden-iframe {
   transform: translateX(36rem); }
