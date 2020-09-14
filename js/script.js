@@ -119,10 +119,8 @@ const playerToggler = (buttonStatus, element) => {
   playButton.classList.toggle('play-button--stop');
 };
 
-// const button = document.querySelector('.play-button');
 playButton.addEventListener('click', () => {
   buttonIsActive = !buttonIsActive;
-
   playerToggler(buttonIsActive, player);
 });
 

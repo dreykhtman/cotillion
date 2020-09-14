@@ -8,6 +8,8 @@
   height: 51rem;
 
   transition: transform 0.2s, border 0.6s;
+  background-color: $color-navbar;
+  border: 5px solid $color-navbar;
 
   & > iframe {
     position: absolute;
@@ -26,25 +28,13 @@
 .hidden-player {
   transform: scaleX(0);
   transform-origin: center;
-  // transform: translateX(36rem);
 }
 
 .hidden-iframe {
   transform: translateX(36rem);
 }
 
-// #player-two-years {
-//   background-color: rgb(131, 41, 5);
-// }
-
-// #player-the-debutantes {
-//   background-color: black;
-// }
-
-// #player-korean-fan-death {
-//   background-color: crimson;
-// }
-
-// #player-cotillion {
-//   background-color: skyblue;
-// }
+.reverse-scale {
+  transform: scaleX(2);
+  transform-origin: center;
+}
