@@ -76,7 +76,7 @@ html {
 
 .container {
   display: grid;
-  grid-template-rows: 80vh 1fr min-content 66vh;
+  grid-template-rows: 80vh 1fr min-content 30vh;
   grid-template-columns: [full-start] 13vw [content-start] repeat(3, [col-start] 1fr [col-end]) [content-end] 13vw [full-end];
   background: linear-gradient(to bottom, #4e6c9e, #edac8e, #6f79d8);
   color: #f0f0f0; }
@@ -286,8 +286,19 @@ body {
 
 .footer {
   grid-row: -1 / -2;
-  grid-column: col-start 2 / col-end 2;
-  align-self: end; }
+  grid-column: full-start / full-end;
+  background-color: #1d1d1d;
+  margin-top: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .footer > p {
+    display: block;
+    margin: 2rem;
+    font-size: 1.6rem; }
+    .footer > p > a {
+      color: #adc0e7; }
 
 .header {
   grid-column: 1 / -1;
