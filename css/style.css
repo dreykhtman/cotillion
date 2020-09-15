@@ -162,7 +162,8 @@ body {
 .album {
   display: flex;
   position: relative;
-  cursor: pointer; }
+  cursor: pointer;
+  box-shadow: 0.7rem 1.7rem 5rem rgba(0, 0, 0, 0.2); }
   .album__cover-logo {
     font-family: "Levenim", sans-serif;
     position: absolute;
