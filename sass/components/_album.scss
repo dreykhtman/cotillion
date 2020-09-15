@@ -5,6 +5,7 @@
   cursor: pointer;
 
   &__cover-logo {
+    font-family: $font-logo;
     position: absolute;
     z-index: 3;
   }

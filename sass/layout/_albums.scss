@@ -13,10 +13,10 @@
   grid-template-columns: 3fr 4fr 3fr;
 
   position: relative;
-  font-family: $font-logo;
   font-weight: 400;
 
   &__logo {
+    font-family: $font-logo;
     grid-row: 1 / span 1;
     grid-column: 1 / -1;
     position: sticky;
