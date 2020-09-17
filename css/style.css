@@ -78,7 +78,7 @@ html {
   display: grid;
   grid-template-rows: 80vh 1fr min-content 30vh;
   grid-template-columns: [full-start] 13vw [content-start] repeat(3, [col-start] 1fr [col-end]) [content-end] 13vw [full-end];
-  background-color: #5e87cf;
+  background: linear-gradient(to bottom, #5e87cf, #3f6bb6);
   color: #f0f0f0; }
 
 /*
@@ -173,6 +173,12 @@ body {
     width: 100%;
     height: 100%; }
 
+.play-button-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  filter: drop-shadow(3px 7px 4px rgba(0, 0, 0, 0.2)); }
+
 .play-button {
   position: fixed;
   bottom: 4rem;
@@ -181,6 +187,7 @@ body {
   width: 10rem;
   cursor: pointer;
   background-color: #f0f0f0;
+  z-index: 1000;
   opacity: 0;
   visibility: hidden; }
   .play-button::before {
@@ -242,7 +249,7 @@ body {
 
 .description {
   display: grid;
-  grid-template-rows: 70vh min-content 70vh;
+  grid-template-rows: 70vh minmax(min-content, 325vh) 70vh;
   grid-template-columns: repeat(3, minmax(max-content, 1fr)); }
   .description__is-100 {
     display: inline-block;

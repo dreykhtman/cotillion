@@ -1,6 +1,6 @@
 .description {
   display: grid;
-  grid-template-rows: 70vh min-content 70vh;
+  grid-template-rows: 70vh minmax(min-content, 325vh) 70vh;
   grid-template-columns: repeat(3, minmax(max-content, 1fr));
 
   &__is-100 {
@@ -50,6 +50,10 @@
       // height: 10rem;
       // color: white;
       font-weight: 700;
+      // font-size: 5rem;
+      // color: white;
+      // text-shadow: 2px 2px black;
+      // border-bottom: 2px dotted $color-text;
     }
 
     &--dima {
