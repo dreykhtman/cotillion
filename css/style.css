@@ -115,13 +115,19 @@ body {
 .logo {
   display: inline-block;
   font-family: "Levenim", sans-serif;
-  font-size: 30rem;
+  font-size: 29rem;
   font-weight: 400;
   margin-top: 2rem; }
 
 .heading-2 {
   font-size: 7rem;
   text-align: center; }
+
+.link {
+  color: #f0f0f0;
+  text-decoration: none;
+  border-bottom: 4px dotted rgba(240, 240, 240, 0.5);
+  color: white; }
 
 #the-debutantes-cover-logo {
   font-size: 5vw;
@@ -163,7 +169,7 @@ body {
   display: flex;
   position: relative;
   cursor: pointer;
-  box-shadow: 0.7rem 1.7rem 5rem rgba(0, 0, 0, 0.2); }
+  box-shadow: 1rem 1.4rem 3rem rgba(0, 0, 0, 0.1); }
   .album__cover-logo {
     font-family: "Levenim", sans-serif;
     position: absolute;
@@ -177,7 +183,7 @@ body {
   position: fixed;
   bottom: 0;
   right: 0;
-  filter: drop-shadow(3px 7px 4px rgba(0, 0, 0, 0.2)); }
+  filter: drop-shadow(0.5rem 0.7rem 0px rgba(0, 0, 0, 0.2)); }
 
 .play-button {
   position: fixed;
@@ -289,8 +295,6 @@ body {
     .description__list > :first-child {
       transition: all 0.2s cubic-bezier(1, 0.31, 1, 1.14);
       top: 23vh; }
-    .description__list > :last-child {
-      font-weight: 700; }
     .description__list--dima {
       grid-column: -2 /-1; }
 
@@ -302,7 +306,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; }
+  flex-direction: column;
+  font-family: 'Kumbh Sans', cursive; }
   .footer > p {
     display: block;
     margin: 2rem;
@@ -383,9 +388,10 @@ body {
   right: 5rem;
   width: 31rem;
   height: 51rem;
+  box-shadow: 0.5rem 0.7rem 0px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s, border 0.6s;
   background-color: #3f3f3f;
-  border: 5px solid #3f3f3f; }
+  border: 0.5rem solid #3f3f3f; }
   .player > iframe {
     position: absolute;
     top: 0;

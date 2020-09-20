@@ -4,8 +4,7 @@
   position: relative;
   cursor: pointer;
 
-  // box-shadow: 1rem 1.5rem 3rem rgba($color: #000000, $alpha: 0.2);
-  box-shadow: 0.7rem 1.7rem 5rem rgba($color: #000, $alpha: 0.2);
+  box-shadow: $shadow-large;
 
   &__cover-logo {
     font-family: $font-logo;
@@ -19,3 +18,18 @@
     height: 100%;
   }
 }
+
+// #album-the-debutantes {
+//   box-shadow: 0.1rem 1.5rem 0rem #f97300;
+// }
+// #album-two-years {
+//   box-shadow: 0.1rem 1.5rem 0rem #f97300;
+// }
+
+// #album-korean-fan-death {
+//   box-shadow: 0.1rem 1.5rem 0rem #660000;
+// }
+
+// #album-cotillion {
+//   box-shadow: 0.1rem 1.5rem 0rem $color-text;
+// }

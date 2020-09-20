@@ -10,7 +10,7 @@ body {
 .logo {
   display: inline-block;
   font-family: $font-logo;
-  font-size: 30rem;
+  font-size: 29rem;
   font-weight: 400;
   margin-top: 2rem;
 }
@@ -18,6 +18,14 @@ body {
 .heading-2 {
   font-size: $font-size-large;
   text-align: center;
+}
+
+.link {
+  color: $color-text;
+  // text-decoration-style: wavy;
+  text-decoration: none;
+  border-bottom: 4px dotted rgba($color-text, 0.5);
+  color: rgb(255, 255, 255);
 }
 
 #the-debutantes-cover-logo {

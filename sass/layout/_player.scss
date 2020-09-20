@@ -6,10 +6,11 @@
   right: 5rem;
   width: 31rem;
   height: 51rem;
+  box-shadow: $shadow-medium;
 
   transition: transform 0.2s, border 0.6s;
   background-color: $color-navbar;
-  border: 5px solid $color-navbar;
+  border: 0.5rem solid $color-navbar;
 
   & > iframe {
     position: absolute;
