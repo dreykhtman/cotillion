@@ -112,6 +112,10 @@ html {
 body {
   font-family: "Milonga", sans-serif; }
 
+::selection {
+  color: #5e87cf;
+  background-color: #555555; }
+
 .logo {
   display: inline-block;
   font-family: "Levenim", sans-serif;
@@ -120,14 +124,12 @@ body {
   margin-top: 2rem; }
 
 .heading-2 {
-  font-size: 7rem;
+  font-size: 6rem;
   text-align: center; }
 
 .link {
   color: #f0f0f0;
-  text-decoration: none;
-  border-bottom: 4px dotted rgba(240, 240, 240, 0.5);
-  color: white; }
+  text-decoration: none; }
 
 #the-debutantes-cover-logo {
   font-size: 5vw;
@@ -247,7 +249,8 @@ body {
     filter: blur(2rem);
     opacity: 0; }
     .albums__logo span {
-      z-index: 2; }
+      z-index: 2;
+      cursor: default; }
   .albums__heading {
     grid-row: 2 / span 1;
     grid-column: 1 / -1;
@@ -255,7 +258,7 @@ body {
 
 .description {
   display: grid;
-  grid-template-rows: 70vh minmax(min-content, 325vh) 70vh;
+  grid-template-rows: 70vh minmax(min-content, 305vh) 70vh;
   grid-template-columns: repeat(3, minmax(max-content, 1fr)); }
   .description__is-100 {
     display: inline-block;
@@ -276,25 +279,40 @@ body {
     text-align: center; }
     .description__list > li {
       padding: 1.5rem 2rem;
-      position: sticky; }
+      position: sticky;
+      height: 0; }
     .description__list > :nth-child(1) {
-      top: 29vh;
+      top: 27vh;
       margin-bottom: 72vh; }
     .description__list > :nth-child(2) {
-      top: 42vh;
+      top: 40vh;
       margin-bottom: 59vh; }
     .description__list > :nth-child(3) {
-      top: 55vh;
+      top: 53vh;
       margin-bottom: 46vh; }
     .description__list > :nth-child(4) {
-      top: 68vh;
+      top: 66vh;
       margin-bottom: 33vh; }
     .description__list > :nth-child(5) {
-      top: 81vh;
+      top: 79vh;
       margin-bottom: 20vh; }
     .description__list > :first-child {
       transition: all 0.2s cubic-bezier(1, 0.31, 1, 1.14);
       top: 23vh; }
+    .description__list > :last-child {
+      font-size: 5rem;
+      z-index: 1000; }
+      .description__list > :last-child::before {
+        position: absolute;
+        left: 10%;
+        top: 30%;
+        content: '';
+        width: 75%;
+        height: 50%;
+        background-color: transparent;
+        z-index: -1;
+        transform: rotate(-1deg);
+        border-radius: 5px; }
     .description__list--dima {
       grid-column: -2 /-1; }
 
@@ -364,6 +382,7 @@ body {
         left: 1rem;
         top: 2.3rem; }
       .navbar__list > li .nav-selected {
+        transition: background-color 0.1s;
         position: absolute;
         border-radius: 50%;
         width: 1.6rem;

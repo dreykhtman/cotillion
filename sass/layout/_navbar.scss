@@ -45,6 +45,8 @@
       }
 
       .nav-selected {
+        transition: background-color 0.1s;
+
         position: absolute;
         border-radius: 50%;
         width: 1.6rem;
