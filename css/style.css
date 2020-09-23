@@ -76,7 +76,7 @@ html {
 
 .container {
   display: grid;
-  grid-template-rows: 80vh 1fr min-content 30vh;
+  grid-template-rows: 80vh 1fr min-content minmax(30vh, min-content);
   grid-template-columns: [full-start] 13vw [content-start] repeat(3, [col-start] 1fr [col-end]) [content-end] 13vw [full-end];
   background: linear-gradient(to bottom, #5e87cf, #3f6bb6);
   color: #f0f0f0; }
@@ -127,10 +127,6 @@ body {
   font-size: 6rem;
   text-align: center; }
 
-.link {
-  color: #f0f0f0;
-  text-decoration: none; }
-
 #the-debutantes-cover-logo {
   font-size: 5vw;
   top: 62.5%;
@@ -152,20 +148,8 @@ body {
   left: 7.1%;
   top: 2.8%; }
 
-/* Not used*/
-.cotillion-album-logo {
-  top: -100vh; }
-  .cotillion-album-logo--td {
-    position: absolute;
-    height: 0;
-    margin-left: -20vw;
-    top: 250vh;
-    font-size: 6vw;
-    color: black; }
-  .cotillion-album-logo--c {
-    font-size: 9vw;
-    margin-top: 2.8%;
-    margin-left: 6.8%; }
+#top-logo {
+  opacity: 0; }
 
 .album {
   display: flex;
@@ -280,7 +264,7 @@ body {
     .description__list > li {
       padding: 1.5rem 2rem;
       position: sticky;
-      height: 0; }
+      height: 1rem; }
     .description__list > :nth-child(1) {
       top: 27vh;
       margin-bottom: 72vh; }
@@ -300,19 +284,7 @@ body {
       transition: all 0.2s cubic-bezier(1, 0.31, 1, 1.14);
       top: 23vh; }
     .description__list > :last-child {
-      font-size: 5rem;
-      z-index: 1000; }
-      .description__list > :last-child::before {
-        position: absolute;
-        left: 10%;
-        top: 30%;
-        content: '';
-        width: 75%;
-        height: 50%;
-        background-color: transparent;
-        z-index: -1;
-        transform: rotate(-1deg);
-        border-radius: 5px; }
+      font-size: 5rem; }
     .description__list--dima {
       grid-column: -2 /-1; }
 
@@ -325,13 +297,16 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: 'Kumbh Sans', cursive; }
+  font-family: "Kumbh Sans", sans-serif; }
   .footer > p {
     display: block;
     margin: 2rem;
     font-size: 1.6rem; }
     .footer > p > a {
       color: #adc0e7; }
+  .footer ::selection {
+    color: #000;
+    background-color: #fff; }
 
 .header {
   grid-column: 1 / -1;

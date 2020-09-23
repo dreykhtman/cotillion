@@ -30,7 +30,7 @@
     & > li {
       padding: 1.5rem 2rem;
       position: sticky;
-      height: 0;
+      height: 1rem;
     }
 
     @for $i from 1 through 5 {
@@ -47,42 +47,7 @@
     }
 
     & > :last-child {
-      // text-shadow: 10px 10px 10px rgba(65, 65, 65, 0.5);
-      // font-size: $font-size-large;
-      // height: 10rem;
-      // color: white;
-      // font-weight: 700;
       font-size: 5rem;
-
-      // color: white;
-      // border-bottom: 2px dotted $color-text;
-      z-index: 1000;
-      // background-color: darkslateblue;
-
-      &::before {
-        position: absolute;
-        left: 10%;
-        top: 30%;
-        content: '';
-        width: 75%;
-        height: 50%;
-        background-color: transparent;
-        z-index: -1;
-        transform: rotate(-1deg);
-        border-radius: 5px;
-      }
-      // &::after {
-      //   position: absolute;
-      //   left: 0%;
-      //   top: 100%;
-      //   content: '';
-      //   width: 100%;
-      //   height: 4%;
-      //   background-color: $color-text;
-      //   z-index: -2;
-      //   transform: rotate(2deg);
-      //   border-radius: 5px;
-      // }
     }
 
     &--dima {
