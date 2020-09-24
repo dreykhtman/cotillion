@@ -33,6 +33,7 @@ observer.observe(targetList);
 //
 // Navbar & jumping logo observer
 //
+
 const playButton = document.querySelector('.play-button');
 
 const sections = document.querySelectorAll('.section');
@@ -83,8 +84,6 @@ const navbarCallback = (entries, observer) => {
 
     if (currentAlbumCoverLogo === null) {
       if (entry.isIntersecting) {
-        // playButton.classList.remove('show-button');
-
         jumpingLogo.classList.add('animation-fadein');
         jumpingLogo.classList.remove('animation-fadeout');
       } else {
@@ -98,15 +97,14 @@ const navbarCallback = (entries, observer) => {
 };
 
 const navbarObserver = new IntersectionObserver(navbarCallback, navbarOptions);
-
 sections.forEach((section) => navbarObserver.observe(section));
 navbarObserver.observe(ourAlbums);
 
 //
 // Player
 //
-const player = document.querySelector('.player');
 
+const player = document.querySelector('.player');
 let buttonIsActive = false;
 
 const playerToggler = (buttonStatus, element) => {
@@ -124,13 +122,7 @@ playButton.addEventListener('click', () => {
   playerToggler(buttonIsActive, player);
 });
 
-// click album cover --> player for this album pops up
-// click another cover --> current player leaves, another pops up
-// click same cover --> player leaves
-// play button toggles player
-
 const album = document.querySelectorAll('.album');
-
 let activePlayerName = 'the-debutantes';
 
 album.forEach((a) => {
@@ -140,18 +132,6 @@ album.forEach((a) => {
       `player-${clickedAlbumName}`
     );
 
-    // if (clickedAlbumName !== activePlayerName && !buttonIsActive) {
-    //   const pl = document.getElementById(`player-${activePlayerName}`);
-    //   pl.style.transition = 'transform 0s';
-    //   pl.classList.add('hidden-iframe');
-    //   currentAlbumPlayer.classList.remove('hidden-iframe');
-
-    //   pl.style.transition = 'transform 0.2s';
-    //   activePlayerName = clickedAlbumName;
-    // }
-
-    // // donut delete
-    // else
     if (clickedAlbumName !== activePlayerName) {
       document
         .getElementById(`player-${activePlayerName}`)
