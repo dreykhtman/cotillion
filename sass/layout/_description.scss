@@ -1,6 +1,6 @@
 .description {
   display: grid;
-  grid-template-rows: 70vh minmax(min-content, 305vh) 70vh;
+  grid-template-rows: 70vh minmax(min-content, 300vh) 70vh;
   grid-template-columns: repeat(3, minmax(max-content, 1fr));
 
   &__is-100 {
