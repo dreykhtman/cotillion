@@ -8,14 +8,25 @@
 }
 
 html {
-  box-sizing: border-box;
   font-size: 62.5%;
   scroll-behavior: smooth;
+
+  @include responsive(bp1500) {
+    font-size: 56.25%;
+  }
+
+  @include responsive(bp1300) {
+    font-size: 50%;
+  }
+}
+
+body {
+  box-sizing: border-box;
 }
 
 .container {
   display: grid;
-  grid-template-rows: 80vh 1fr min-content minmax(30vh, min-content);
+  grid-template-rows: 80vh 1fr min-content 29rem;
   grid-template-columns:
     [full-start] 13vw [content-start] repeat(3, [col-start] 1fr [col-end])
     [content-end] 13vw [full-end];
