@@ -206,6 +206,26 @@ body {
     grid-column: 2 / span 1;
     padding-top: 7rem;
     padding-bottom: 10rem; }
+    @media only screen and (max-width: 93.75em) {
+      .albums__album-container {
+        padding-top: 9rem;
+        padding-bottom: 8rem; } }
+    @media only screen and (max-width: 81.25em) {
+      .albums__album-container {
+        padding-top: 4.4rem;
+        padding-bottom: 12rem; } }
+    @media only screen and (max-width: 62.5em) {
+      .albums__album-container {
+        padding-top: 10vh; } }
+  @media only screen and (max-width: 93.75em) {
+    .albums {
+      grid-template-columns: 2fr 3fr 2fr; } }
+  @media only screen and (max-width: 81.25em) {
+    .albums {
+      grid-template-columns: 1fr 2fr 1fr; } }
+  @media only screen and (max-width: 62.5em) {
+    .albums {
+      grid-template-columns: 1fr 3fr 1fr; } }
   .albums__logo {
     font-family: "Levenim", sans-serif;
     grid-row: 1 / span 1;
