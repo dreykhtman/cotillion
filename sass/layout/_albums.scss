@@ -9,7 +9,7 @@
   // row-gap: 15rem;
 
   display: grid;
-  grid-template-rows: 70vh 70vh repeat(4, 1fr);
+  grid-template-rows: 60vh 50vh repeat(4, 1fr);
   grid-template-columns: 3fr 4fr 3fr;
 
   position: relative;
@@ -38,20 +38,4 @@
     transition: color 2s cubic-bezier(0, 1.25, 0.94, 0.98);
     // color: $color-text;
   }
-
-  // #album-the-debutantes {
-  //   grid-row: 3 / span 1;
-  // }
-
-  // #album-two-years {
-  //   grid-row: 4 / span 1;
-  // }
-
-  // #album-korean-fan-death {
-  //   grid-row: 5 / span 1;
-  // }
-
-  // #album-cotillion {
-  //   grid-row: 6 / span 1;
-  // }
 }
