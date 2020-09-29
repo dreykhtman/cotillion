@@ -18,6 +18,10 @@ body {
   font-size: 29rem;
   font-weight: 400;
   margin-top: 2rem;
+
+  @include responsive(bp1300) {
+    font-size: 22vw;
+  }
 }
 
 .heading-2 {

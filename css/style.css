@@ -106,6 +106,9 @@ body {
   font-size: 29rem;
   font-weight: 400;
   margin-top: 2rem; }
+  @media only screen and (max-width: 81.25em) {
+    .logo {
+      font-size: 22vw; } }
 
 .heading-2 {
   font-size: 6rem;
