@@ -209,40 +209,19 @@ body {
 .albums {
   grid-column: full-start / full-end;
   display: grid;
-  grid-template-rows: 60vh 50vh repeat(4, 1fr);
+  grid-template-rows: 60vh 50vh repeat(4, minmax(max-content, 100vh));
   grid-template-columns: 3fr 4fr 3fr;
   position: relative;
   font-weight: 400; }
-  .albums__album-container {
-    grid-column: 2 / span 1;
-    padding-top: 7rem;
-    padding-bottom: 10rem; }
-<<<<<<< HEAD
   @media only screen and (max-width: 93.75em) {
     .albums {
       grid-template-columns: 2fr 5fr 2fr; } }
-=======
-    @media only screen and (max-width: 93.75em) {
-      .albums__album-container {
-        padding-top: 9rem;
-        padding-bottom: 8rem; } }
-    @media only screen and (max-width: 81.25em) {
-      .albums__album-container {
-        padding-top: 4.4rem;
-        padding-bottom: 12rem; } }
-    @media only screen and (max-width: 62.5em) {
-      .albums__album-container {
-        padding-top: 10vh; } }
-  @media only screen and (max-width: 93.75em) {
-    .albums {
-      grid-template-columns: 2fr 3fr 2fr; } }
-  @media only screen and (max-width: 81.25em) {
-    .albums {
-      grid-template-columns: 1fr 2fr 1fr; } }
-  @media only screen and (max-width: 62.5em) {
-    .albums {
-      grid-template-columns: 1fr 3fr 1fr; } }
->>>>>>> 354e3dc3d13537702908893452a2de4a481c2f71
+  .albums__album-container {
+    height: 100%;
+    grid-column: 2 / span 1;
+    display: flex;
+    align-items: center;
+    padding: 5rem 0; }
   .albums__logo {
     font-family: "Levenim", sans-serif;
     grid-row: 1 / span 1;

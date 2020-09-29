@@ -1,27 +1,10 @@
 .albums {
-  &__album-container {
-    grid-column: 2 / span 1;
-    padding-top: 7rem;
-    padding-bottom: 10rem;
-
-    @include responsive(bp1500) {
-      padding-top: 9rem;
-      padding-bottom: 8rem;
-    }
-    @include responsive(bp1300) {
-      padding-top: 4.4rem;
-      padding-bottom: 12rem;
-    }
-    @include responsive(bp1000) {
-      padding-top: 10vh;
-    }
-  }
-
   grid-column: full-start / full-end;
-  // row-gap: 15rem;
+  // row-gap: 30rem;
+  // align-items: center;
 
   display: grid;
-  grid-template-rows: 60vh 50vh repeat(4, 1fr);
+  grid-template-rows: 60vh 50vh repeat(4, minmax(max-content, 100vh));
   grid-template-columns: 3fr 4fr 3fr;
 
   @include responsive(bp1500) {
@@ -30,6 +13,27 @@
 
   position: relative;
   font-weight: 400;
+
+  &__album-container {
+    height: 100%;
+    grid-column: 2 / span 1;
+    display: flex;
+    align-items: center;
+    padding: 5rem 0;
+    // padding-bottom: 100%;
+
+    // @include responsive(bp1500) {
+    //   padding-top: 9rem;
+    //   padding-bottom: 8rem;
+    // }
+    // @include responsive(bp1300) {
+    //   padding-top: 4.4rem;
+    //   padding-bottom: 12rem;
+    // }
+    // @include responsive(bp1000) {
+    //   padding-top: 10vh;
+    // }
+  }
 
   &__logo {
     font-family: $font-logo;
