@@ -11,6 +11,15 @@
     grid-template-columns: 2fr 5fr 2fr;
   }
 
+  @include responsive(bp1000) {
+    grid-template-columns: 1fr 6fr 1fr;
+  }
+
+  @include responsive(bp600) {
+    grid-template-rows: 60vh 50vh repeat(4, minmax(max-content, 75vh));
+    grid-template-columns: 1fr 20fr 1fr;
+  }
+
   position: relative;
   font-weight: 400;
 
@@ -20,7 +29,10 @@
     display: flex;
     align-items: center;
     padding: 5rem 0;
-    // padding-bottom: 100%;
+
+    @include responsive(bp600) {
+      padding: 0;
+    }
 
     // @include responsive(bp1500) {
     //   padding-top: 9rem;

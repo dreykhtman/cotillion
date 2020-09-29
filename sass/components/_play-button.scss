@@ -5,6 +5,7 @@
   // height: 10rem;
   // width: 10rem;
   filter: drop-shadow($shadow-small);
+  z-index: 101;
 }
 
 .play-button {
@@ -15,7 +16,7 @@
   width: 10rem;
   cursor: pointer;
   background-color: $color-text;
-  z-index: 1000;
+  z-index: 100;
 
   opacity: 0;
   visibility: hidden;

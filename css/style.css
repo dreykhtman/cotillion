@@ -119,6 +119,12 @@ body {
   @media only screen and (max-width: 93.75em) {
     #the-debutantes-cover-logo {
       font-size: 6.9vw; } }
+  @media only screen and (max-width: 62.5em) {
+    #the-debutantes-cover-logo {
+      font-size: 9.2vw; } }
+  @media only screen and (max-width: 37.5em) {
+    #the-debutantes-cover-logo {
+      font-size: 11.05vw; } }
 
 #two-years-cover-logo {
   font-size: 2.6vw;
@@ -127,6 +133,12 @@ body {
   @media only screen and (max-width: 93.75em) {
     #two-years-cover-logo {
       font-size: 3.6vw; } }
+  @media only screen and (max-width: 62.5em) {
+    #two-years-cover-logo {
+      font-size: 4.85vw; } }
+  @media only screen and (max-width: 37.5em) {
+    #two-years-cover-logo {
+      font-size: 5.8vw; } }
 
 #korean-fan-death-cover-logo {
   font-size: 2.6vw;
@@ -135,6 +147,12 @@ body {
   @media only screen and (max-width: 93.75em) {
     #korean-fan-death-cover-logo {
       font-size: 3.6vw; } }
+  @media only screen and (max-width: 62.5em) {
+    #korean-fan-death-cover-logo {
+      font-size: 4.85vw; } }
+  @media only screen and (max-width: 37.5em) {
+    #korean-fan-death-cover-logo {
+      font-size: 5.8vw; } }
 
 #cotillion-cover-logo {
   font-size: 8.77vw;
@@ -143,6 +161,12 @@ body {
   @media only screen and (max-width: 93.75em) {
     #cotillion-cover-logo {
       font-size: 12.1vw; } }
+  @media only screen and (max-width: 62.5em) {
+    #cotillion-cover-logo {
+      font-size: 16.3vw; } }
+  @media only screen and (max-width: 37.5em) {
+    #cotillion-cover-logo {
+      font-size: 19.5vw; } }
 
 #top-logo {
   opacity: 0; }
@@ -164,7 +188,8 @@ body {
   position: fixed;
   bottom: 0;
   right: 0;
-  filter: drop-shadow(0.5rem 0.7rem 0px rgba(0, 0, 0, 0.2)); }
+  filter: drop-shadow(0.5rem 0.7rem 0px rgba(0, 0, 0, 0.2));
+  z-index: 101; }
 
 .play-button {
   position: fixed;
@@ -174,7 +199,7 @@ body {
   width: 10rem;
   cursor: pointer;
   background-color: #f0f0f0;
-  z-index: 1000;
+  z-index: 100;
   opacity: 0;
   visibility: hidden; }
   .play-button::before {
@@ -216,12 +241,22 @@ body {
   @media only screen and (max-width: 93.75em) {
     .albums {
       grid-template-columns: 2fr 5fr 2fr; } }
+  @media only screen and (max-width: 62.5em) {
+    .albums {
+      grid-template-columns: 1fr 6fr 1fr; } }
+  @media only screen and (max-width: 37.5em) {
+    .albums {
+      grid-template-rows: 60vh 50vh repeat(4, minmax(max-content, 75vh));
+      grid-template-columns: 1fr 20fr 1fr; } }
   .albums__album-container {
     height: 100%;
     grid-column: 2 / span 1;
     display: flex;
     align-items: center;
     padding: 5rem 0; }
+    @media only screen and (max-width: 37.5em) {
+      .albums__album-container {
+        padding: 0; } }
   .albums__logo {
     font-family: "Levenim", sans-serif;
     grid-row: 1 / span 1;
