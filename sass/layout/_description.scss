@@ -27,6 +27,10 @@
     font-size: $font-size-medium;
     text-align: center;
 
+    @include responsive(bp1000) {
+      font-size: 3.4rem;
+    }
+
     & > li {
       padding: 1.5rem 2rem;
       position: sticky;
@@ -48,10 +52,34 @@
 
     & > :last-child {
       font-size: 5rem;
+
+      @include responsive(bp1000) {
+        font-size: 4.4rem;
+      }
+    }
+
+    &--ben {
+      @include responsive(bp1200) {
+        padding-right: 10rem;
+        padding-left: 9rem;
+      }
+      @include responsive(bp1000) {
+        padding-right: 3rem;
+        padding-left: 5rem;
+      }
     }
 
     &--dima {
       grid-column: -2 /-1;
+
+      @include responsive(bp1200) {
+        padding-left: 10rem;
+        padding-right: 9rem;
+      }
+      @include responsive(bp1000) {
+        padding-right: 5rem;
+        padding-left: 3rem;
+      }
     }
   }
 }

@@ -4,4 +4,8 @@
   margin-bottom: -110vh;
   padding-top: 80vh;
   margin-top: -80vh;
+
+  @include responsive(bp1200) {
+    grid-column: full-start / full-end;
+  }
 }
