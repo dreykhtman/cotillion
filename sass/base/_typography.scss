@@ -22,6 +22,10 @@ body {
   @include responsive(bp1300) {
     font-size: 22vw;
   }
+
+  @include responsive(bp1000) {
+    margin-top: 8rem;
+  }
 }
 
 .heading-2 {
