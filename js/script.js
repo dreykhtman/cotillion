@@ -1,3 +1,6 @@
+// let mql = window.matchMedia('(max-width: 50em)');
+// console.log(mql);
+
 //
 // Observer for the 50% element slide animation
 //

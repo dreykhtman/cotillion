@@ -88,6 +88,9 @@ body {
   grid-template-columns: [full-start] 13vw [content-start] repeat(3, [col-start] 1fr [col-end]) [content-end] 13vw [full-end];
   background: linear-gradient(to bottom, #4d7bcc, #3f6bb6);
   color: #f0f0f0; }
+  @media only screen and (max-width: 50em) {
+    .container {
+      grid-template-rows: 75vh 1fr min-content 29rem; } }
 
 @font-face {
   font-family: 'Levenim';
@@ -119,6 +122,9 @@ body {
   @media only screen and (max-width: 62.5em) {
     .heading-2 {
       font-size: 4.8rem; } }
+  @media only screen and (max-width: 50em) {
+    .heading-2 {
+      font-size: 7.2vw; } }
 
 #the-debutantes-cover-logo {
   font-size: 5vw;
@@ -288,6 +294,9 @@ body {
   display: grid;
   grid-template-rows: 70vh minmax(min-content, 300vh) 70vh;
   grid-template-columns: repeat(3, minmax(max-content, 1fr)); }
+  @media only screen and (max-width: 50em) {
+    .description {
+      grid-template-rows: 40vh repeat(2, minmax(min-content, 300vh)) 70vh; } }
   .description__is-100 {
     display: inline-block;
     position: sticky;
@@ -295,10 +304,17 @@ body {
     grid-row: 1 / span 1;
     grid-column: 1 / -1;
     justify-self: center; }
+    @media only screen and (max-width: 50em) {
+      .description__is-100 {
+        position: relative;
+        font-size: 7.2vw; } }
     .description__is-100 #is {
       margin-bottom: 6rem; }
     .description__is-100 #hundred {
       transition: all 0.8s cubic-bezier(0, 0.9, 0.07, 0.85) 0.4s; }
+      @media only screen and (max-width: 50em) {
+        .description__is-100 #hundred {
+          margin-top: 640vh; } }
   .description__list {
     grid-row: 2 / span 1;
     list-style: none;
@@ -308,6 +324,10 @@ body {
     @media only screen and (max-width: 62.5em) {
       .description__list {
         font-size: 3.4rem; } }
+    @media only screen and (max-width: 50em) {
+      .description__list {
+        grid-row: none;
+        font-size: 5.6vw; } }
     .description__list > li {
       padding: 1.5rem 2rem;
       position: sticky;
@@ -315,26 +335,53 @@ body {
     .description__list > :nth-child(1) {
       top: 27vh;
       margin-bottom: 72vh; }
+      @media only screen and (max-width: 50em) {
+        .description__list > :nth-child(1) {
+          top: 15vh;
+          margin-bottom: 75vh; } }
     .description__list > :nth-child(2) {
       top: 40vh;
       margin-bottom: 59vh; }
+      @media only screen and (max-width: 50em) {
+        .description__list > :nth-child(2) {
+          top: 30vh;
+          margin-bottom: 60vh; } }
     .description__list > :nth-child(3) {
       top: 53vh;
       margin-bottom: 46vh; }
+      @media only screen and (max-width: 50em) {
+        .description__list > :nth-child(3) {
+          top: 45vh;
+          margin-bottom: 45vh; } }
     .description__list > :nth-child(4) {
       top: 66vh;
       margin-bottom: 33vh; }
+      @media only screen and (max-width: 50em) {
+        .description__list > :nth-child(4) {
+          top: 60vh;
+          margin-bottom: 30vh; } }
     .description__list > :nth-child(5) {
       top: 79vh;
       margin-bottom: 20vh; }
+      @media only screen and (max-width: 50em) {
+        .description__list > :nth-child(5) {
+          top: 75vh;
+          margin-bottom: 15vh; } }
     .description__list > :first-child {
       transition: all 0.2s cubic-bezier(1, 0.31, 1, 1.14);
       top: 23vh; }
+      @media only screen and (max-width: 50em) {
+        .description__list > :first-child {
+          top: 13vh;
+          font-size: 7.2vw; } }
     .description__list > :last-child {
       font-size: 5rem; }
       @media only screen and (max-width: 62.5em) {
         .description__list > :last-child {
           font-size: 4.4rem; } }
+      @media only screen and (max-width: 50em) {
+        .description__list > :last-child {
+          font-size: 7.2vw; } }
     @media only screen and (max-width: 75em) {
       .description__list--ben {
         padding-right: 10rem;
@@ -343,6 +390,11 @@ body {
       .description__list--ben {
         padding-right: 3rem;
         padding-left: 5rem; } }
+    @media only screen and (max-width: 50em) {
+      .description__list--ben {
+        grid-row: 2 / span 1;
+        grid-column: 2 / span 1;
+        margin-bottom: 20vh; } }
     .description__list--dima {
       grid-column: -2 /-1; }
       @media only screen and (max-width: 75em) {
@@ -353,6 +405,10 @@ body {
         .description__list--dima {
           padding-right: 5rem;
           padding-left: 3rem; } }
+      @media only screen and (max-width: 50em) {
+        .description__list--dima {
+          grid-row: 3 / span 1;
+          grid-column: 2 / span 1; } }
 
 .footer {
   grid-row: -1 / -2;

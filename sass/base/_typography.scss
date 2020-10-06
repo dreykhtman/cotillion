@@ -35,6 +35,9 @@ body {
   @include responsive(bp1000) {
     font-size: 4.8rem;
   }
+  @include responsive(bp800) {
+    font-size: $font-size-responsive-large;
+  }
 }
 
 #the-debutantes-cover-logo {

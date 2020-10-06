@@ -3,6 +3,10 @@
   grid-template-rows: 70vh minmax(min-content, 300vh) 70vh;
   grid-template-columns: repeat(3, minmax(max-content, 1fr));
 
+  @include responsive(bp800) {
+    grid-template-rows: 40vh repeat(2, minmax(min-content, 300vh)) 70vh;
+  }
+
   &__is-100 {
     display: inline-block;
     position: sticky;
@@ -11,12 +15,21 @@
     grid-column: 1 / -1;
     justify-self: center;
 
+    @include responsive(bp800) {
+      position: relative;
+      font-size: $font-size-responsive-large;
+    }
+
     #is {
       margin-bottom: 6rem;
     }
 
     #hundred {
       transition: all 0.8s cubic-bezier(0, 0.9, 0.07, 0.85) 0.4s;
+
+      @include responsive(bp800) {
+        margin-top: 640vh;
+      }
     }
   }
 
@@ -31,6 +44,11 @@
       font-size: 3.4rem;
     }
 
+    @include responsive(bp800) {
+      grid-row: none;
+      font-size: $font-size-responsive-medium;
+    }
+
     & > li {
       padding: 1.5rem 2rem;
       position: sticky;
@@ -41,13 +59,22 @@
       & > :nth-child(#{$i}) {
         top: ($i * 13vh) + 14vh;
         margin-bottom: 85vh - $i * 13vh;
+
+        @include responsive(bp800) {
+          top: ($i * 15vh);
+          margin-bottom: 90vh - $i * 15vh;
+        }
       }
     }
 
     & > :first-child {
       transition: all 0.2s cubic-bezier(1, 0.31, 1, 1.14);
       top: 23vh;
-      // height: auto;
+
+      @include responsive(bp800) {
+        top: 13vh;
+        font-size: $font-size-responsive-large;
+      }
     }
 
     & > :last-child {
@@ -55,6 +82,10 @@
 
       @include responsive(bp1000) {
         font-size: 4.4rem;
+      }
+
+      @include responsive(bp800) {
+        font-size: $font-size-responsive-large;
       }
     }
 
@@ -66,6 +97,11 @@
       @include responsive(bp1000) {
         padding-right: 3rem;
         padding-left: 5rem;
+      }
+      @include responsive(bp800) {
+        grid-row: 2 / span 1;
+        grid-column: 2 / span 1;
+        margin-bottom: 20vh;
       }
     }
 
@@ -79,6 +115,10 @@
       @include responsive(bp1000) {
         padding-right: 5rem;
         padding-left: 3rem;
+      }
+      @include responsive(bp800) {
+        grid-row: 3 / span 1;
+        grid-column: 2 / span 1;
       }
     }
   }
