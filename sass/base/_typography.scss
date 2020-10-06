@@ -26,6 +26,10 @@ body {
   @include responsive(bp1000) {
     margin-top: 8rem;
   }
+
+  @include responsive(bp800) {
+    font-size: $font-size-responsive-logo;
+  }
 }
 
 .heading-2 {

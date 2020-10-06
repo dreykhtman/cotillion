@@ -62,6 +62,10 @@
       z-index: 2;
       cursor: default;
     }
+
+    @include responsive(bp800) {
+      padding-top: 8rem;
+    }
   }
 
   &__heading {

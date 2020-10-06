@@ -115,6 +115,9 @@ body {
   @media only screen and (max-width: 62.5em) {
     .logo {
       margin-top: 8rem; } }
+  @media only screen and (max-width: 50em) {
+    .logo {
+      font-size: 24vw; } }
 
 .heading-2 {
   font-size: 6rem;
@@ -285,6 +288,9 @@ body {
     .albums__logo span {
       z-index: 2;
       cursor: default; }
+    @media only screen and (max-width: 50em) {
+      .albums__logo {
+        padding-top: 8rem; } }
   .albums__heading {
     grid-row: 2 / span 1;
     grid-column: 1 / -1;
@@ -314,7 +320,7 @@ body {
       transition: all 0.8s cubic-bezier(0, 0.9, 0.07, 0.85) 0.4s; }
       @media only screen and (max-width: 50em) {
         .description__is-100 #hundred {
-          margin-top: 505vh; } }
+          margin-top: 510vh; } }
   .description__list {
     grid-row: 2 / span 1;
     list-style: none;
