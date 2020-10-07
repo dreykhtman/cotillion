@@ -15,13 +15,20 @@
     display: block;
     margin: 2rem;
     font-size: 1.6rem;
-    // width: 30%;
     // text-align: center;
     // line-height: 2rem;
+
+    @include responsive(bp1200) {
+      width: 60%;
+    }
 
     & > a {
       color: #adc0e7;
     }
+  }
+
+  &__builtby {
+    text-align: center;
   }
 
   ::selection {
