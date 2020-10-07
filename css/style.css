@@ -503,8 +503,7 @@ body {
   z-index: 20; }
   @media only screen and (max-width: 50em) {
     .navbar {
-      left: -3.6rem;
-      bottom: -2rem; } }
+      left: -3.6rem; } }
   .navbar__list {
     list-style: none;
     font-size: 2rem;
@@ -593,6 +592,10 @@ body {
   transition: transform 0.2s, border 0.6s;
   background-color: #3f3f3f;
   border: 0.5rem solid #3f3f3f; }
+  @media only screen and (max-width: 50em) {
+    .player {
+      bottom: 13rem;
+      right: 1.5rem; } }
   .player > iframe {
     position: absolute;
     top: 0;

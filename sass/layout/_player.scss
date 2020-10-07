@@ -12,6 +12,11 @@
   background-color: $color-navbar;
   border: 0.5rem solid $color-navbar;
 
+  @include responsive(bp800) {
+    bottom: 13rem;
+    right: 1.5rem;
+  }
+
   & > iframe {
     position: absolute;
     top: 0;
