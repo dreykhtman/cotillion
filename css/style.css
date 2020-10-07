@@ -1,10 +1,18 @@
 .slide-right {
   transform: translateX(25vw);
   opacity: 0; }
+  @media only screen and (max-width: 50em) {
+    .slide-right {
+      opacity: 1;
+      transform: translateX(0); } }
 
 .slide-left {
   transform: translateX(-25vw);
   opacity: 0; }
+  @media only screen and (max-width: 50em) {
+    .slide-left {
+      opacity: 1;
+      transform: translateX(0); } }
 
 .slide-hidden {
   transform: translateY(-6rem);
@@ -220,6 +228,18 @@ body {
   z-index: 100;
   opacity: 0;
   visibility: hidden; }
+  @media only screen and (max-width: 50em) {
+    .play-button {
+      bottom: 3rem;
+      right: 2rem;
+      height: 8rem;
+      width: 8rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .play-button {
+      bottom: 2rem;
+      right: 1.5rem;
+      height: 7rem;
+      width: 7rem; } }
   .play-button::before {
     background-color: #f0f0f0; }
   .play-button:hover {
@@ -236,6 +256,14 @@ body {
       left: 0.5rem;
       top: 0.8rem;
       clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%); }
+      @media only screen and (max-width: 50em) {
+        .play-button--play::before {
+          height: 6.4rem;
+          width: 6.4rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .play-button--play::before {
+          height: 5.4rem;
+          width: 5.4rem; } }
   .play-button--stop {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     transition: clip-path 0.2s, background-color 0.6s; }
@@ -248,6 +276,14 @@ body {
       left: 0.5rem;
       top: 0.5rem;
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
+      @media only screen and (max-width: 50em) {
+        .play-button--stop::before {
+          height: 7rem;
+          width: 7rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .play-button--stop::before {
+          height: 6rem;
+          width: 6rem; } }
 
 .albums {
   grid-column: full-start / full-end;

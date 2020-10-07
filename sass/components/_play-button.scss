@@ -2,8 +2,6 @@
   position: fixed;
   bottom: 0;
   right: 0;
-  // height: 10rem;
-  // width: 10rem;
   filter: drop-shadow($shadow-small);
   z-index: 101;
 }
@@ -17,6 +15,20 @@
   cursor: pointer;
   background-color: $color-text;
   z-index: 100;
+
+  @include responsive(bp800) {
+    bottom: 3rem;
+    right: 2rem;
+    height: 8rem;
+    width: 8rem;
+  }
+
+  @include responsive(bp600) {
+    bottom: 2rem;
+    right: 1.5rem;
+    height: 7rem;
+    width: 7rem;
+  }
 
   opacity: 0;
   visibility: hidden;
@@ -43,6 +55,16 @@
       left: 0.5rem;
       top: 0.8rem;
       clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+
+      @include responsive(bp800) {
+        height: 6.4rem;
+        width: 6.4rem;
+      }
+
+      @include responsive(bp600) {
+        height: 5.4rem;
+        width: 5.4rem;
+      }
     }
   }
 
@@ -60,6 +82,16 @@
       left: 0.5rem;
       top: 0.5rem;
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+      @include responsive(bp800) {
+        height: 7rem;
+        width: 7rem;
+      }
+
+      @include responsive(bp600) {
+        height: 6rem;
+        width: 6rem;
+      }
     }
   }
 }
