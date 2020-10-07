@@ -11,6 +11,11 @@
   flex-direction: column;
   font-family: $font-secondary;
 
+  @include responsive(bp800) {
+    justify-content: flex-start;
+    z-index: 30;
+  }
+
   & > p {
     display: block;
     margin: 2rem;
@@ -23,6 +28,12 @@
 
     & > a {
       color: #adc0e7;
+    }
+  }
+
+  &__links {
+    @include responsive(bp800) {
+      padding-top: 3rem;
     }
   }
 

@@ -21,6 +21,11 @@
 .slide-hidden {
   transform: translateY(-6rem);
   opacity: 0;
+
+  @include responsive(bp800) {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .slide-down {
