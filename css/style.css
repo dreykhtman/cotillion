@@ -98,7 +98,7 @@ body {
   color: #f0f0f0; }
   @media only screen and (max-width: 50em) {
     .container {
-      grid-template-rows: 75vh 1fr min-content 29rem; } }
+      grid-template-rows: 75vh 1fr min-content 33rem; } }
 
 @font-face {
   font-family: 'Levenim';
@@ -465,7 +465,8 @@ body {
   .footer > p {
     display: block;
     margin: 2rem;
-    font-size: 1.6rem; }
+    font-size: 1.6rem;
+    line-height: 2.4rem; }
     @media only screen and (max-width: 75em) {
       .footer > p {
         width: 60%; } }
@@ -500,6 +501,10 @@ body {
   color: #f0f0f0;
   white-space: nowrap;
   z-index: 20; }
+  @media only screen and (max-width: 50em) {
+    .navbar {
+      left: -3.6rem;
+      bottom: -2rem; } }
   .navbar__list {
     list-style: none;
     font-size: 2rem;
