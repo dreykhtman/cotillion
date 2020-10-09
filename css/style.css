@@ -537,12 +537,15 @@ body {
         left: 3.4rem;
         top: -0.1rem;
         padding-left: 3.6rem;
-        margin-left: -3.6rem; }
+        margin-left: -3.6rem;
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer; }
         @media only screen and (max-width: 93.75em) {
           .navbar__list > li > .section-link {
             left: 3.8rem;
             top: 0.2rem; } }
-        .navbar__list > li > .section-link:hover {
+        .navbar__list > li > .section-link:hover, .navbar__list > li > .section-link:focus {
           color: #fcfcfc;
           text-shadow: 0 0 1px #fcfcfc; }
       .navbar__list > li:not(:last-child)::before {
@@ -586,10 +589,6 @@ body {
         background-color: #3f3f3f; }
     .navbar__list:hover {
       color: inherit; }
-    .navbar__list .section-link {
-      text-decoration: none;
-      color: inherit;
-      cursor: pointer; }
 
 .player {
   z-index: 10;

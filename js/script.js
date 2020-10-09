@@ -154,3 +154,10 @@ album.forEach((a) => {
     }
   });
 });
+
+// const navbarLinks = document.querySelectorAll('.section-link');
+// navbarLinks.forEach((link) =>
+//   link.addEventListener('focus', (e) => {
+//     console.log(e.target.innerHTML);
+//   })
+// );

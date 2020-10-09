@@ -38,12 +38,17 @@
         padding-left: 3.6rem;
         margin-left: -3.6rem;
 
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+
         @include responsive(bp1500) {
           left: 3.8rem;
           top: 0.2rem;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
           color: #fcfcfc;
           text-shadow: 0 0 1px #fcfcfc;
         }
@@ -104,10 +109,10 @@
       color: inherit;
     }
 
-    .section-link {
-      text-decoration: none;
-      color: inherit;
-      cursor: pointer;
-    }
+    // .section-link {
+    //   text-decoration: none;
+    //   color: inherit;
+    //   cursor: pointer;
+    // }
   }
 }
