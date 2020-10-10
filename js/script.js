@@ -38,7 +38,6 @@ observer.observe(targetList);
 //
 
 const playButton = document.querySelector('.play-button');
-
 const sections = document.querySelectorAll('.section');
 const ourAlbums = document.getElementById('our-albums');
 
@@ -154,10 +153,3 @@ album.forEach((a) => {
     }
   });
 });
-
-// const navbarLinks = document.querySelectorAll('.section-link');
-// navbarLinks.forEach((link) =>
-//   link.addEventListener('focus', (e) => {
-//     console.log(e.target.innerHTML);
-//   })
-// );
