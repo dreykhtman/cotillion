@@ -20,7 +20,8 @@
     & > li {
       position: relative;
       // css max() doesn't work in sass properly. sass unquote() is a workaround
-      border: unquote('max(2px, 0.2rem)') solid $color-navbar;
+      // border: unquote('max(2px, 0.2rem)') solid $color-navbar;
+      border: 0.2rem solid $color-navbar;
       height: 2.6rem;
       width: 2.6rem;
       margin: 1rem;
