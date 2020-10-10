@@ -105,6 +105,14 @@ body {
       grid-template-rows: 75vh 1fr min-content 33vh; } }
 
 @font-face {
+  font-family: 'Milonga';
+  src: url("../public/font/Milonga.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Kumbh Sans';
+  src: url("../public/font/KumbhSans.ttf") format("truetype"); }
+
+@font-face {
   font-family: 'Levenim';
   src: local("Levenim MT"), url("../public/font/lvnm.woff") format("woff"); }
 
@@ -523,7 +531,7 @@ body {
     padding: 1rem 20rem 1.4rem 1.2rem; }
     .navbar__list > li {
       position: relative;
-      border: 0.2rem solid #3f3f3f;
+      border: calc(max(2px, 0.2rem)) solid #3f3f3f;
       height: 2.6rem;
       width: 2.6rem;
       margin: 1rem;
