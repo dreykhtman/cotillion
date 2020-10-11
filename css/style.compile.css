@@ -167,7 +167,7 @@ body {
 #two-years-cover-logo {
   font-size: 2.6vw;
   left: 51.1%;
-  top: 89.7%; }
+  top: 89.66%; }
   @media only screen and (max-width: 93.75em) {
     #two-years-cover-logo {
       font-size: 3.6vw; } }
@@ -181,7 +181,7 @@ body {
 #korean-fan-death-cover-logo {
   font-size: 2.6vw;
   left: 48.6%;
-  top: 89.7%; }
+  top: 89.66%; }
   @media only screen and (max-width: 93.75em) {
     #korean-fan-death-cover-logo {
       font-size: 3.6vw; } }
@@ -604,8 +604,8 @@ body {
   overflow: hidden;
   bottom: 18rem;
   right: 5rem;
-  width: 31rem;
-  height: 51rem;
+  width: 310px;
+  height: 510px;
   box-shadow: 0.5rem 0.7rem 0px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s, border 0.6s;
   background-color: #3f3f3f;
