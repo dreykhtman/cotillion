@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "node-sass -wr sass/main.scss css/style.css",
+    "watch": "node-sass -wr sass/main.scss public/style.css",
     "compile": "node-sass sass/main.scss css/style.compile.css",
     "prefix": "postcss --use autoprefixer -b 'last 10 versions' css/style.compile.css -o css/style.prefix.css",
-    "minify:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
-    "minify:js": "terser js/script.js -o js/script-min.js",
+    "minify:css": "node-sass css/style.prefix.css public/style.css --output-style compressed",
+    "minify:js": "terser js/script.js -o public/script.js",
     "build": "npm-run-all compile prefix minify:css minify:js"
   },
   "keywords": [],

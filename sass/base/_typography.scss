@@ -1,16 +1,16 @@
 @font-face {
   font-family: 'Milonga';
-  src: url('../public/font/Milonga.ttf') format('truetype');
+  src: url('font/Milonga.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Kumbh Sans';
-  src: url('../public/font/KumbhSans.ttf') format('truetype');
+  src: url('font/KumbhSans.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Levenim';
-  src: local('Levenim MT'), url('../public/font/lvnm.woff') format('woff');
+  src: local('Levenim MT'), url('font/lvnm.woff') format('woff');
 }
 
 body {
