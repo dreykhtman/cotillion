@@ -10,7 +10,7 @@
 
   transition: transform 0.2s, border 0.6s;
   background-color: $color-navbar;
-  border: 0.5rem solid $color-navbar;
+  border: 5px solid $color-navbar;
 
   @include responsive(bp800) {
     bottom: 13rem;
@@ -37,7 +37,7 @@
 }
 
 .hidden-iframe {
-  transform: translateX(36rem);
+  transform: translateX(360px);
 }
 
 .reverse-scale {
