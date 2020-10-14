@@ -1,5 +1,5 @@
 .player {
-  z-index: 31;
+  z-index: 99;
   position: fixed;
   overflow: hidden;
   bottom: 18rem;
@@ -19,6 +19,8 @@
 
   & > iframe {
     position: absolute;
+    overflow: hidden;
+
     top: 0;
     left: 0;
     z-index: 100;
@@ -26,7 +28,6 @@
     height: 100%;
     border: 0;
     transition: transform 0.2s;
-
     background-color: white;
   }
 }

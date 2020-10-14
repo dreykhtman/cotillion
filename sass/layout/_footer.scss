@@ -20,7 +20,7 @@
     display: block;
     margin: 2rem;
     font-size: 1.6rem;
-    line-height: 2.4rem;
+    line-height: 3rem;
 
     @include responsive(bp1200) {
       width: 60%;
@@ -38,6 +38,8 @@
   }
 
   &__builtby {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
     text-align: center;
   }
 
