@@ -22,6 +22,27 @@
       type="image/x-icon"
     />
 
+    <link
+      rel="preload"
+      href="font/Milonga.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="font/KumbhSans.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="font/lvnm.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
     <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
     <title>Cotillion</title>
@@ -55,58 +76,6 @@
         </li>
       </ul>
     </nav>
-
-    <div class="player hidden-player">
-      <iframe
-        tabindex="-1"
-        title="Player for album The Debutantes"
-        class=""
-        id="player-the-debutantes"
-        src="https://bandcamp.com/EmbeddedPlayer/album=907421851/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/"
-        seamless
-      >
-        <a href="http://cotillion.bandcamp.com/album/the-debutantes"
-          >The Debutantes by Cotillion</a
-        >
-      </iframe>
-      <iframe
-        tabindex="-1"
-        title="Player for album Two Years"
-        class="hidden-iframe"
-        id="player-two-years"
-        src="https://bandcamp.com/EmbeddedPlayer/album=3310490202/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/"
-        seamless
-        ><a href="http://cotillion.bandcamp.com/album/two-years"
-          >Two Years by Cotillion</a
-        ></iframe
-      >
-      <iframe
-        tabindex="-1"
-        title="Player for album Korean Fan Death"
-        class="hidden-iframe"
-        id="player-korean-fan-death"
-        src="https://bandcamp.com/EmbeddedPlayer/album=4163869744/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/"
-        seamless
-        ><a href="http://cotillion.bandcamp.com/album/korean-fan-death"
-          >Korean Fan Death by Cotillion</a
-        ></iframe
-      >
-      <iframe
-        tabindex="-1"
-        title="Player for album Cotillion"
-        class="hidden-iframe"
-        id="player-cotillion"
-        src="https://bandcamp.com/EmbeddedPlayer/album=3684220875/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/"
-        seamless
-        ><a href="http://cotillion.bandcamp.com/album/cotillion-2"
-          >Cotillion by Cotillion</a
-        ></iframe
-      >
-    </div>
-
-    <div class="play-button-container">
-      <div class="play-button play-button--play"></div>
-    </div>
 
     <div class="container">
       <header class="header">
@@ -216,6 +185,58 @@
           Built by <a href="mailto:dreykhtman@gmail.com">Dima Reykhtman</a>.
         </p>
       </footer>
+    </div>
+
+    <div class="player hidden-player">
+      <!-- <iframe
+        tabindex="-1"
+        title="Player for album The Debutantes"
+        class=""
+        id="player-the-debutantes"
+        src="https://bandcamp.com/EmbeddedPlayer/album=907421851/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/"
+        seamless
+      >
+        <a href="http://cotillion.bandcamp.com/album/the-debutantes"
+          >The Debutantes by Cotillion</a
+        >
+      </iframe>
+      <iframe
+        tabindex="-1"
+        title="Player for album Two Years"
+        class="hidden-iframe"
+        id="player-two-years"
+        src="https://bandcamp.com/EmbeddedPlayer/album=3310490202/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/"
+        seamless
+        ><a href="http://cotillion.bandcamp.com/album/two-years"
+          >Two Years by Cotillion</a
+        ></iframe
+      >
+      <iframe
+        tabindex="-1"
+        title="Player for album Korean Fan Death"
+        class="hidden-iframe"
+        id="player-korean-fan-death"
+        src="https://bandcamp.com/EmbeddedPlayer/album=4163869744/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/"
+        seamless
+        ><a href="http://cotillion.bandcamp.com/album/korean-fan-death"
+          >Korean Fan Death by Cotillion</a
+        ></iframe
+      >
+      <iframe
+        tabindex="-1"
+        title="Player for album Cotillion"
+        class="hidden-iframe"
+        id="player-cotillion"
+        src="https://bandcamp.com/EmbeddedPlayer/album=3684220875/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/"
+        seamless
+        ><a href="http://cotillion.bandcamp.com/album/cotillion-2"
+          >Cotillion by Cotillion</a
+        ></iframe
+      > -->
+    </div>
+
+    <div class="play-button-container">
+      <div class="play-button play-button--play"></div>
     </div>
   </body>
 </html>
