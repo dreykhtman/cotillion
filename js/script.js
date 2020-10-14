@@ -23,9 +23,11 @@ const callback = (entries, observer) => {
       fiftyRight.classList.add('slide-left');
       hundred.classList.add('slide-down');
     } else {
-      fiftyLeft.classList.remove('slide-right');
-      fiftyRight.classList.remove('slide-left');
       hundred.classList.remove('slide-down');
+      setTimeout(() => {
+        fiftyLeft.classList.remove('slide-right');
+        fiftyRight.classList.remove('slide-left');
+      }, 600);
     }
   });
 };

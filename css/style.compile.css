@@ -47,7 +47,7 @@
 .show-button {
   animation-name: show;
   animation-duration: 1s;
-  animation-delay: 1.5s;
+  animation-delay: 1.2s;
   animation-fill-mode: forwards; }
 
 @keyframes fadeout {
@@ -96,13 +96,13 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 80vh 1fr min-content 29rem;
+  grid-template-rows: 80vh 1fr min-content 31rem;
   grid-template-columns: [full-start] 13vw [content-start] repeat(3, [col-start] 1fr [col-end]) [content-end] 13vw [full-end];
   background: linear-gradient(to bottom, #4d7bcc, #3f6bb6);
   color: #f0f0f0; }
   @media only screen and (max-width: 50em) {
     .container {
-      grid-template-rows: 75vh 1fr min-content 33vh; } }
+      grid-template-rows: 70vh 1fr min-content minmax(min-content, 33vh); } }
 
 @font-face {
   font-family: 'Milonga';
@@ -114,7 +114,7 @@ body {
 
 @font-face {
   font-family: 'Levenim';
-  src: local("Levenim MT"), url("font/lvnm.woff") format("woff"); }
+  src: url("font/lvnm.woff") format("woff"); }
 
 body {
   font-family: "Milonga", sans-serif; }
@@ -365,7 +365,7 @@ body {
     .description__is-100 #is {
       margin-bottom: 6rem; }
     .description__is-100 #hundred {
-      transition: all 0.8s cubic-bezier(0, 0.9, 0.07, 0.85) 0.4s; }
+      transition: all 0.6s cubic-bezier(0, 0.9, 0.07, 0.85) 0.4s; }
       @media only screen and (max-width: 50em) {
         .description__is-100 #hundred {
           margin-top: 510vh; } }
@@ -482,7 +482,7 @@ body {
     display: block;
     margin: 2rem;
     font-size: 1.6rem;
-    line-height: 2.4rem; }
+    line-height: 3rem; }
     @media only screen and (max-width: 75em) {
       .footer > p {
         width: 60%; } }
@@ -492,6 +492,8 @@ body {
     .footer__links {
       padding-top: 3rem; } }
   .footer__builtby {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
     text-align: center; }
   .footer ::selection {
     color: #000;
@@ -522,7 +524,7 @@ body {
   z-index: 20; }
   @media only screen and (max-width: 50em) {
     .navbar {
-      left: -3.6rem; } }
+      left: -3.9rem; } }
   .navbar__list {
     list-style: none;
     font-size: 2rem;
@@ -599,7 +601,7 @@ body {
       color: inherit; }
 
 .player {
-  z-index: 31;
+  z-index: 99;
   position: fixed;
   overflow: hidden;
   bottom: 18rem;
@@ -616,6 +618,7 @@ body {
       right: 1.5rem; } }
   .player > iframe {
     position: absolute;
+    overflow: hidden;
     top: 0;
     left: 0;
     z-index: 100;
