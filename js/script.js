@@ -127,7 +127,7 @@ playButton.addEventListener('click', () => {
 });
 
 const album = document.querySelectorAll('.album');
-let activePlayerName = 'the-debutantes';
+let activePlayerName = 'cotillion';
 
 album.forEach((a) => {
   a.addEventListener('click', () => {

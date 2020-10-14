@@ -3,7 +3,7 @@
   display: flex;
   position: relative;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: all 0.3s;
   // height: 100%;
 
   box-shadow: $shadow-large;
@@ -21,7 +21,7 @@
   }
 
   &:hover {
-    transform: scale(1.005, 1.005);
+    transform: scale(1.009, 1.009);
     box-shadow: $shadow-largest;
   }
 }

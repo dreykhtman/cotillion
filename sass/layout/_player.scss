@@ -34,14 +34,9 @@
 
 .hidden-player {
   transform: scaleX(0);
-  transform-origin: center;
+  // transform-origin: center;
 }
 
 .hidden-iframe {
   transform: translateX(360px);
-}
-
-.reverse-scale {
-  transform: scaleX(2);
-  transform-origin: center;
 }

@@ -48,7 +48,7 @@
       crossorigin
     />
     <link rel="stylesheet" href="style.css" />
-    <script defer src="../js/script.js"></script>
+    <script defer src="script.js"></script>
     <title>Cotillion</title>
   </head>
   <body>
@@ -58,25 +58,29 @@
           <span id="active-top" class="nav-selected"></span
           ><a class="section-link" href="#anchor-top">About Us</a>
         </li>
+
         <li>
-          <span id="active-the-debutantes" class="nav-selected"></span
-          ><a class="section-link" href="#anchor-the-debutantes"
-            >The Debutantes</a
-          >
+          <span id="active-cotillion" class="nav-selected"></span
+          ><a class="section-link" href="#anchor-cotillion">Cotillion</a>
         </li>
-        <li>
-          <span id="active-two-years" class="nav-selected"></span
-          ><a class="section-link" href="#anchor-two-years">Two Years</a>
-        </li>
+
         <li>
           <span id="active-korean-fan-death" class="nav-selected"></span
           ><a class="section-link" href="#anchor-korean-fan-death"
             >Korean Fan Death</a
           >
         </li>
+
         <li>
-          <span id="active-cotillion" class="nav-selected"></span
-          ><a class="section-link" href="#anchor-cotillion">Cotillion</a>
+          <span id="active-two-years" class="nav-selected"></span
+          ><a class="section-link" href="#anchor-two-years">Two Years</a>
+        </li>
+
+        <li>
+          <span id="active-the-debutantes" class="nav-selected"></span
+          ><a class="section-link" href="#anchor-the-debutantes"
+            >The Debutantes</a
+          >
         </li>
       </ul>
     </nav>
@@ -119,31 +123,15 @@
         </div>
         <div id="our-albums" class="albums__heading heading-2">Our Albums</div>
 
-        <div id="anchor-the-debutantes" class="albums__album-container section">
-          <div id="album-the-debutantes" class="album">
+        <div id="anchor-cotillion" class="albums__album-container section">
+          <div id="album-cotillion" class="album">
             <div
-              id="the-debutantes-cover-logo"
+              id="cotillion-cover-logo"
               class="album__cover-logo animation-fadeout"
             >
               Cotillion
             </div>
-            <img
-              src="img/the-debutantes.jpg"
-              alt="The Debutantes album cover"
-            />
-          </div>
-        </div>
-
-        <div id="anchor-two-years" class="albums__album-container section">
-          <div id="album-two-years" class="album">
-            <div
-              id="two-years-cover-logo"
-              class="album__cover-logo animation-fadeout"
-            >
-              Cotillion
-            </div>
-
-            <img src="img/two-years.jpg" alt="Two Years album cover" />
+            <img src="img/cotillion.jpg" alt="Cotillion album cover" />
           </div>
         </div>
 
@@ -165,15 +153,31 @@
           </div>
         </div>
 
-        <div id="anchor-cotillion" class="albums__album-container section">
-          <div id="album-cotillion" class="album">
+        <div id="anchor-two-years" class="albums__album-container section">
+          <div id="album-two-years" class="album">
             <div
-              id="cotillion-cover-logo"
+              id="two-years-cover-logo"
               class="album__cover-logo animation-fadeout"
             >
               Cotillion
             </div>
-            <img src="img/cotillion.jpg" alt="Cotillion album cover" />
+
+            <img src="img/two-years.jpg" alt="Two Years album cover" />
+          </div>
+        </div>
+
+        <div id="anchor-the-debutantes" class="albums__album-container section">
+          <div id="album-the-debutantes" class="album">
+            <div
+              id="the-debutantes-cover-logo"
+              class="album__cover-logo animation-fadeout"
+            >
+              Cotillion
+            </div>
+            <img
+              src="img/the-debutantes.jpg"
+              alt="The Debutantes album cover"
+            />
           </div>
         </div>
       </div>
@@ -192,29 +196,18 @@
     </div>
 
     <div class="player hidden-player">
-      <!-- <iframe
-        tabindex="-1"
-        title="Player for album The Debutantes"
-        class=""
-        id="player-the-debutantes"
-        src="https://bandcamp.com/EmbeddedPlayer/album=907421851/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/"
-        seamless
-      >
-        <a href="http://cotillion.bandcamp.com/album/the-debutantes"
-          >The Debutantes by Cotillion</a
-        >
-      </iframe>
       <iframe
         tabindex="-1"
-        title="Player for album Two Years"
-        class="hidden-iframe"
-        id="player-two-years"
-        src="https://bandcamp.com/EmbeddedPlayer/album=3310490202/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/"
+        title="Player for album Cotillion"
+        class=""
+        id="player-cotillion"
+        src="https://bandcamp.com/EmbeddedPlayer/album=3684220875/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/"
         seamless
-        ><a href="http://cotillion.bandcamp.com/album/two-years"
-          >Two Years by Cotillion</a
+        ><a href="http://cotillion.bandcamp.com/album/cotillion-2"
+          >Cotillion by Cotillion</a
         ></iframe
       >
+
       <iframe
         tabindex="-1"
         title="Player for album Korean Fan Death"
@@ -226,17 +219,31 @@
           >Korean Fan Death by Cotillion</a
         ></iframe
       >
+
       <iframe
         tabindex="-1"
-        title="Player for album Cotillion"
+        title="Player for album Two Years"
         class="hidden-iframe"
-        id="player-cotillion"
-        src="https://bandcamp.com/EmbeddedPlayer/album=3684220875/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/"
+        id="player-two-years"
+        src="https://bandcamp.com/EmbeddedPlayer/album=3310490202/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/"
         seamless
-        ><a href="http://cotillion.bandcamp.com/album/cotillion-2"
-          >Cotillion by Cotillion</a
+        ><a href="http://cotillion.bandcamp.com/album/two-years"
+          >Two Years by Cotillion</a
         ></iframe
-      > -->
+      >
+
+      <iframe
+        tabindex="-1"
+        title="Player for album The Debutantes"
+        class="hidden-iframe"
+        id="player-the-debutantes"
+        src="https://bandcamp.com/EmbeddedPlayer/album=907421851/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/"
+        seamless
+      >
+        <a href="http://cotillion.bandcamp.com/album/the-debutantes"
+          >The Debutantes by Cotillion</a
+        >
+      </iframe>
     </div>
 
     <div class="play-button-container">
