@@ -110,12 +110,20 @@ navbarObserver.observe(ourAlbums);
 
 const player = document.querySelector('.player');
 let buttonIsActive = false;
+const album = document.querySelectorAll('.album');
+let activePlayerName = 'cotillion';
 
 const playerToggler = (buttonStatus, element) => {
   if (buttonStatus) {
     element.classList.remove('hidden-player');
+    document
+      .getElementById(`album-${activePlayerName}`)
+      .classList.add('add-border');
   } else {
     element.classList.add('hidden-player');
+    document
+      .getElementById(`album-${activePlayerName}`)
+      .classList.remove('add-border');
   }
   playButton.classList.toggle('play-button--play');
   playButton.classList.toggle('play-button--stop');
@@ -125,9 +133,6 @@ playButton.addEventListener('click', () => {
   buttonIsActive = !buttonIsActive;
   playerToggler(buttonIsActive, player);
 });
-
-const album = document.querySelectorAll('.album');
-let activePlayerName = 'cotillion';
 
 album.forEach((a) => {
   a.addEventListener('click', () => {
@@ -141,11 +146,19 @@ album.forEach((a) => {
         .getElementById(`player-${activePlayerName}`)
         .classList.add('hidden-iframe');
 
+      document
+        .getElementById(`album-${activePlayerName}`)
+        .classList.remove('add-border');
+
       setTimeout(() => {
         currentAlbumPlayer.classList.remove('hidden-iframe');
       }, 200);
 
       activePlayerName = clickedAlbumName;
+
+      document
+        .getElementById(`album-${activePlayerName}`)
+        .classList.add('add-border');
     }
 
     if (!buttonIsActive) {

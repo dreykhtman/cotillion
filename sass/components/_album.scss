@@ -3,8 +3,8 @@
   display: flex;
   position: relative;
   cursor: pointer;
-  transition: all 0.3s;
-  // height: 100%;
+  transition: transform 0.3s, outline 0.1s;
+  outline: 5px solid transparent;
 
   box-shadow: $shadow-large;
 
@@ -17,11 +17,15 @@
   & > img {
     z-index: 2;
     width: 100%;
-    // height: 100%;
+    height: 100%;
   }
 
   &:hover {
     transform: scale(1.009, 1.009);
     box-shadow: $shadow-largest;
   }
+}
+
+.add-border {
+  outline: 5px solid $color-text;
 }

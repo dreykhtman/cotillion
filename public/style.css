@@ -213,7 +213,8 @@ body {
   display: flex;
   position: relative;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: transform 0.3s, outline 0.1s;
+  outline: 5px solid transparent;
   box-shadow: 1rem 1.4rem 3rem rgba(0, 0, 0, 0.1); }
   .album__cover-logo {
     font-family: "Levenim", sans-serif;
@@ -221,10 +222,14 @@ body {
     z-index: 3; }
   .album > img {
     z-index: 2;
-    width: 100%; }
+    width: 100%;
+    height: 100%; }
   .album:hover {
     transform: scale(1.009, 1.009);
     box-shadow: 1.2rem 1.2rem 3.4rem rgba(0, 0, 0, 0.09); }
+
+.add-border {
+  outline: 5px solid #f0f0f0; }
 
 .play-button-container {
   position: fixed;
