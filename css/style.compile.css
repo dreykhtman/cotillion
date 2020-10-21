@@ -321,7 +321,7 @@ body {
       grid-template-columns: 1fr 6fr 1fr; } }
   @media only screen and (max-width: 37.5em) {
     .albums {
-      grid-template-rows: 60vh 50vh repeat(4, minmax(max-content, 75vh));
+      grid-template-rows: 60vh 30vh repeat(4, minmax(max-content, 75vh));
       grid-template-columns: 1fr 20fr 1fr; } }
   .albums__album-container {
     height: 100%;
