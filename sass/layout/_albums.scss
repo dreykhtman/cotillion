@@ -16,7 +16,7 @@
   }
 
   @include responsive(bp600) {
-    grid-template-rows: 60vh 50vh repeat(4, minmax(max-content, 75vh));
+    grid-template-rows: 60vh 30vh repeat(4, minmax(max-content, 75vh));
     grid-template-columns: 1fr 20fr 1fr;
   }
 

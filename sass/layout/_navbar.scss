@@ -7,7 +7,7 @@
   z-index: 20;
 
   @include responsive(bp800) {
-    left: -3.9rem;
+    display: none;
   }
 
   &__list {
